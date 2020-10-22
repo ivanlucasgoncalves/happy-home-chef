@@ -1,0 +1,76 @@
+.calendar_main_container {
+    margin-bottom: 0;
+    width: 320px;
+
+    .tb-frontend-calendar {
+        border: none;
+
+        .tbk-main-calendar-navigation {
+            padding: 5px 0 !important;
+        }
+
+        .tbk-row:first-child > .tbk-column {
+            font-size: 18px;
+        }
+
+        .tbk-calendar-year-selector,
+        .tbk-calendar-month-selector {
+            color: #000000;
+            pointer-events: none;
+        }
+
+        .tb-change-month span.dashicons, .tbk-back-to span.dashicons {
+            font-size: 15px;
+            color: #d05b93;
+            padding: 3px 0;
+        }
+
+        .tb-calendar-line.equal.width.tbk-column.tbk-row {
+            padding: 15px 2px;
+        }
+
+        .tb-calendar-line > .tbk-column > .tb-weekline-day {
+            font-size: 12px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        .ui.tb-day.today, .tb-change-month:hover, .tb-change-month:focus, .tbk-back-to:hover, .tbk-back-to:focus, .tbk-column .tb-day:not(.pastday):hover, .tbk-column .tb-day:not(.pastday):focus, div.tb-fast-selector-month-panel .tbk-month-selector:hover, div.tb-fast-selector-month-panel .tbk-month-selector:focus, div.tb-fast-selector-year-panel .tbk-year-selector:hover, div.tb-fast-selector-year-panel .tbk-year-selector:focus {
+            background-color: inherit;
+        }
+
+        .tbk-schedule-list-navigation, .tbk-main-calendar-navigation, .ten.wide, .sixteen.wide {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .tb-calendar-line.equal.width.tbk-column.tbk-row {
+            background: none;
+        }
+
+        .ui.tb-day {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.today {
+                border-radius: 50%;
+                background-color: #d05b93;
+                color: #FFFFFF;
+
+                &:hover {
+                    background-color: green;
+                }
+            }
+        }
+
+    }
+}
+
+
+

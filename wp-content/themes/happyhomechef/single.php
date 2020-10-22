@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package hhc-theme
+ * @package HCC Theme
  */
 
 get_header();

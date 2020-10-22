@@ -2,7 +2,7 @@
 /**
  * Enqueue theme assets.
  *
- * @package tcc-base-theme
+ * @package HCC Theme
  */
 
 /**

@@ -9,5 +9,26 @@
 @import 'fonts';
 
 // =============================================================================
+// Bootstrap
+// =============================================================================
+// Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Optional
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "~bootstrap/scss/utilities/display";
+@import "~bootstrap/scss/utilities/flex";
+@import "~bootstrap/scss/utilities/spacing";
+
+// =============================================================================
 // Initial styles
 // =============================================================================
+@import './vars';
+@import './calendar';
+@import './common/common';
+@import './buttons';
+@import './main-nav';
+@import './footer';

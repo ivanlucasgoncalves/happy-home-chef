@@ -10,6 +10,7 @@ html {
 
 html, body {
 	width: 100%;
+	min-height: 100vh;
 	display: block;
 	position: relative;
 	border: 0;
@@ -188,8 +189,4 @@ ul {
 	li {
 		list-style: none;
 	}
-}
-
-p {
-	line-height: 30px;
 }

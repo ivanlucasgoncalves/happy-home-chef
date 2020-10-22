@@ -1,0 +1,27 @@
+body {
+    font-family: $inter-regular;
+    border-top: 5px solid $secondary-color;
+}
+
+h1 {
+    font-family: $inter-medium;
+    span {
+        font-family: $inter-bold;
+    }
+}
+
+.ndis-disclaimer {
+    font-size: 12px;
+}
+
+.background {
+    &--green {
+        background-color: $secondary-color;
+    }
+}
+
+.color {
+    &--white {
+        color: $white;
+    }
+}

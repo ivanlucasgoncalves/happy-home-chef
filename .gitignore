@@ -36,6 +36,7 @@ wp-config.php
 .env.development.local
 .env.test.local
 .env.production.local
+deploy.js
 
 # WPMVC
 /wp-content/mu-plugins/vendor/
