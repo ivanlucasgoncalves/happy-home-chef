@@ -30,5 +30,10 @@
 @import './calendar';
 @import './common/common';
 @import './buttons';
-@import './main-nav';
 @import './footer';
+
+// =============================================================================
+// Navigation
+// =============================================================================
+@import './navigation/main-nav';
+@import './navigation/footer-nav';

@@ -1,0 +1,25 @@
+.site-footer {
+    .widget_nav_menu {
+
+        .widget-title {
+            font-size: 16px;
+            font-family: $inter-bold;
+            color: $black;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .menu {
+            li {
+                margin-bottom: 10px;
+                a {
+                    font-size: 16px;
+                    font-family: $inter-regular;
+                    color: $black;
+                    display: inline-block;
+                }
+            }
+        }
+
+    }
+}

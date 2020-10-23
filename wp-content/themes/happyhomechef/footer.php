@@ -11,11 +11,24 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer background--green">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<p class="color--white">Copyright 2020 Happy Home Chef. All rights reserved.</p>
+	<footer id="colophon" class="site-footer">
+		<div class="site-footer__top">
+			<div class="container">
+				<div class="row">
+					<?php
+					if ( is_active_sidebar( 'footer' ) ) {
+						dynamic_sidebar( 'footer' );
+					}
+					?>
+				</div>
+			</div>
+		</div>
+		<div class="site-footer__bottom background--green">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<p class="color--white"><?php echo esc_html( 'Copyright' ); ?> <?php echo esc_html( date( 'Y' ) ); ?> <?php echo esc_html( 'Happy Home Chef. All rights reserved.' ); ?></p>
+					</div>
 				</div>
 			</div>
 		</div>

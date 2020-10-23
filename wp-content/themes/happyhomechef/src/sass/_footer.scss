@@ -1,7 +1,19 @@
 .site-footer {
 
-    p {
-        font-size: 12px;
+    &__top {
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
+
+    &__bottom {
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    
 
 }

@@ -55,10 +55,17 @@ template {
 a {
 	background-color: transparent;
 	text-decoration: none;
+	display: inline-block;
+
 	&:active,
 	&:hover {
 		outline: 0;
 	}
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 abbr[title] {

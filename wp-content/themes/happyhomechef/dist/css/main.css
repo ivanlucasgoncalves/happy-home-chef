@@ -44,9 +44,14 @@ template {
 
 a {
   background-color: transparent;
-  text-decoration: none; }
+  text-decoration: none;
+  display: inline-block; }
   a:active, a:hover {
     outline: 0; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 0; }
 
 abbr[title] {
   border-bottom: 1px dotted; }
@@ -2723,14 +2728,18 @@ ul {
     margin-left: auto !important; } }
 
 .calendar_main_container {
-  margin-bottom: 0;
-  width: 320px; }
+  margin-bottom: 0 !important;
+  width: 320px;
+  border-radius: 10px;
+  overflow: hidden; }
+  .calendar_main_container .tbk-main-calendar-settings {
+    display: none; }
   .calendar_main_container .tb-frontend-calendar {
     border: none; }
     .calendar_main_container .tb-frontend-calendar .tbk-main-calendar-navigation {
       padding: 5px 0 !important; }
     .calendar_main_container .tb-frontend-calendar .tbk-row:first-child > .tbk-column {
-      font-size: 18px; }
+      font-size: 16px; }
     .calendar_main_container .tb-frontend-calendar .tbk-calendar-year-selector,
     .calendar_main_container .tb-frontend-calendar .tbk-calendar-month-selector {
       color: #000000;
@@ -2772,7 +2781,8 @@ body {
   border-top: 5px solid #008792; }
 
 h1 {
-  font-family: "Inter Medium", serif; }
+  font-family: "Inter Medium", serif;
+  font-size: 28px; }
   h1 span {
     font-family: "Inter Bold", serif; }
 
@@ -2782,8 +2792,36 @@ h1 {
 .background--green {
   background-color: #008792; }
 
+.color--primary-color {
+  color: #EC4579; }
+
+.color--secondary-color {
+  color: #008792; }
+
 .color--white {
   color: #FFFFFF; }
+
+.fill--primary-color {
+  fill: #EC4579; }
+
+.fill--secondary-color {
+  fill: #008792; }
+
+.fill--white {
+  fill: #FFFFFF; }
+
+.h-100 {
+  height: 100%; }
+
+.block-component {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .block-component--top-hero .top-hero--left-content > * {
+    margin-bottom: 20px; }
+    .block-component--top-hero .top-hero--left-content > *:last-child {
+      margin-bottom: 0; }
+  .block-component--top-hero .top-hero--right-content {
+    min-height: 500px; }
 
 .button {
   display: inline-flex;
@@ -2796,6 +2834,16 @@ h1 {
   .button--green {
     background-color: #008792;
     color: #FFFFFF; }
+
+.site-footer__top {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.site-footer__bottom {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  .site-footer__bottom p {
+    font-size: 12px; }
 
 .main-navigation {
   margin-top: 20px;
@@ -2811,8 +2859,20 @@ h1 {
         font-size: 15px;
         color: #000000; }
 
-.site-footer p {
-  font-size: 12px; }
+.site-footer .widget_nav_menu .widget-title {
+  font-size: 16px;
+  font-family: "Inter Bold", serif;
+  color: #000000;
+  text-transform: uppercase;
+  margin-bottom: 20px; }
+
+.site-footer .widget_nav_menu .menu li {
+  margin-bottom: 10px; }
+  .site-footer .widget_nav_menu .menu li a {
+    font-size: 16px;
+    font-family: "Inter Regular", serif;
+    color: #000000;
+    display: inline-block; }
 
 
 /*# sourceMappingURL=main.css.map*/

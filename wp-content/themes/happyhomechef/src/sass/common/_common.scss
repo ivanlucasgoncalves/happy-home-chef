@@ -5,6 +5,7 @@ body {
 
 h1 {
     font-family: $inter-medium;
+    font-size: 28px;
     span {
         font-family: $inter-bold;
     }
@@ -21,7 +22,54 @@ h1 {
 }
 
 .color {
+    &--primary-color {
+        color: $primary-color;
+    }
+    &--secondary-color {
+        color: $secondary-color;
+    }
     &--white {
         color: $white;
+    }
+}
+
+.fill {
+    &--primary-color {
+        fill: $primary-color;
+    }
+    &--secondary-color {
+        fill: $secondary-color;
+    }
+    &--white {
+        fill: $white;
+    }
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.block-component {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &--top-hero {
+
+        .top-hero {
+            &--left-content {
+                > * {
+                    margin-bottom: 20px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &--right-content {
+                min-height: 500px;
+            }
+        }
+        
     }
 }
