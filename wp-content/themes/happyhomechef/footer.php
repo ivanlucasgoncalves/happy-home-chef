@@ -14,7 +14,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="site-footer__top">
 			<div class="container">
-				<div class="row">
+				<div class="row justify-content-between">
 					<?php
 					if ( is_active_sidebar( 'footer' ) ) {
 						dynamic_sidebar( 'footer' );

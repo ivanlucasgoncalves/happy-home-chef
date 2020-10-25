@@ -1,0 +1,33 @@
+.block-component {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &--top-hero {
+
+        h1.custom-heading {
+            font-family: $inter-medium;
+            font-size: 28px;
+            line-height: 38px;
+            strong {
+                font-family: $inter-bold;
+            }
+        }
+
+        .top-hero {
+            &--left-content {
+                > * {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &--right-content {
+                min-height: 500px;
+            }
+        }
+
+        .ndis-disclaimer {
+            font-size: 12px;
+        }
+        
+    }
+}

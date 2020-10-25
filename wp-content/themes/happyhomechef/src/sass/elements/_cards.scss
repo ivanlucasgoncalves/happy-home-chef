@@ -1,0 +1,35 @@
+.card {
+
+    &--cols-3 {
+        max-width: 340px;
+    }
+
+    &__img {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 200px;
+    }
+    &__title {
+        font-size: 18px;
+        color: $black;
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    &__body {
+        padding: 20px;
+
+        &--more-padding {
+            padding: 20px 30px;
+        }
+        > * {
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}

@@ -27,7 +27,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<nav class="main-navigation">
+					<nav class="main-navigation d-none d-sm-block">
 						<?php
 						wp_nav_menu(
 							[

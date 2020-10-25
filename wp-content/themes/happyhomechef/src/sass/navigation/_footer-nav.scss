@@ -10,10 +10,18 @@
         }
 
         .menu {
+
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+
             li {
-                margin-bottom: 10px;
+                margin-bottom: 15px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
                 a {
-                    font-size: 16px;
+                    font-size: 15px;
                     font-family: $inter-regular;
                     color: $black;
                     display: inline-block;
