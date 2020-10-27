@@ -3030,6 +3030,9 @@ h3 {
 .h-100 {
   height: 100%; }
 
+.w-100 {
+  width: 100%; }
+
 .border-radius {
   border-radius: 10px;
   position: relative;
@@ -3113,6 +3116,25 @@ h3 {
   .block-component--hcc-live-on-sunrise .text-content p:last-child {
     margin-bottom: 0; }
 
+.block-component--reviews .review-stars svg {
+  font-size: 24px; }
+
+.block-component--reviews .button-review {
+  background-color: #FFFFFF;
+  padding: 15px; }
+  .block-component--reviews .button-review .button-title,
+  .block-component--reviews .button-review .button-date {
+    text-align: left; }
+  .block-component--reviews .button-review .button-title {
+    font-family: "Inter Bold", serif;
+    font-size: 16px; }
+  .block-component--reviews .button-review.current-review {
+    background-color: rgba(0, 135, 146, 0.2);
+    border: 1px solid #008792; }
+
+.block-component--reviews .review-content {
+  line-height: 22px; }
+
 .main-navigation {
   margin-top: 20px;
   margin-bottom: 20px; }
@@ -3129,7 +3151,7 @@ h3 {
         position: relative; }
         .main-navigation .menu li a:after {
           content: "";
-          background-color: #000000;
+          background-color: #EC4579;
           position: absolute;
           right: 0;
           bottom: -5px;

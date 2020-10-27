@@ -18,6 +18,7 @@ get_header();
 	<main id="main" class="site-main">
 		<?php get_template_part( 'template-parts/blocks/block', 'top-hero' ); ?>
 		<?php get_template_part( 'template-parts/blocks/block', 'our-services' ); ?>
+		<?php get_template_part( 'template-parts/blocks/block', 'reviews' ); ?>
 		<?php get_template_part( 'template-parts/blocks/block', 'hcc-live-on-sunrise' ); ?>
 	</main>
 

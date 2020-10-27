@@ -1,0 +1,37 @@
+.block-component {
+
+    &--reviews {
+
+        .review-stars {
+            svg {
+                font-size: 24px;
+            }
+        }
+
+        .button-review {
+            background-color: $white;
+            padding: 15px;
+
+            .button-title,
+            .button-date {
+                text-align: left;
+            }
+
+            .button-title {
+                font-family: $inter-bold;
+                font-size: 16px;
+            }
+
+            &.current-review {
+                background-color: rgba( $secondary-color, 0.2 );
+                border: 1px solid $secondary-color;
+            }
+        }
+
+        .review-content {
+            line-height: 22px;
+        }
+
+    }
+
+}
