@@ -1,0 +1,65 @@
+.gform_wrapper {
+
+    .gfield {
+        margin-bottom: 20px;
+    }
+    .gfield_label {
+        font-family: $inter-medium;
+        font-size: 16px;
+        display: block;
+        margin-bottom: 5px;
+    }
+    .ginput_container {
+        input[type="text"],
+        textarea {
+            background-color: $light-grey;
+            padding: 15px 10px;
+            border-radius: 5px;
+            width: 100%;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 200px;
+        }
+    }
+    .gform_button {
+        background-color: $primary-color;
+        color: $white;
+        padding: 12px 15px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .gsurvey-rating {
+        height: 24px;        
+    }
+    .gsurvey-rating:not(:checked)>label {
+        background-image: url(../images/no-fill-stars.svg);
+        width: 38px;
+        font-size: 0 !important;
+        line-height: 36px;
+        background-size: 36px 36px;
+    }
+    .gsurvey-rating:not(:checked)>label:hover, 
+    .gsurvey-rating:not(:checked)>label:hover~label,
+    .gsurvey-rating>input:checked~label {
+        background-image: url(../images/stars.svg);
+        background-size: 36px 36px;
+    }
+
+    // Error
+    .validation_error {
+        position: relative;
+        padding: .75rem 1.25rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        color: #721c24;
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+    }
+    .validation_message {
+        font-size: 12px;
+        color: red;
+        margin-top: 5px;
+    }
+}

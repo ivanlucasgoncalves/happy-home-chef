@@ -11,9 +11,9 @@ get_header( 'review' );
 ?>
 
 	<div class="container">
-		<div class="row">
-			<div class="col">
-				<?php echo do_shortcode( '[gravityform id="1" title="false" description="false" ajax="true" tabindex="49"]' ); ?> 
+		<div class="row justify-content-center mt-4 mb-5">
+			<div class="col-auto">
+				<?php echo do_shortcode( '[gravityform id="1" title="false" description="false" tabindex="49"]' ); ?> 
 			</div>
 		</div>
 	</div>

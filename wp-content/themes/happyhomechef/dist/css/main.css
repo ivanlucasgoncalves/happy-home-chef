@@ -3041,6 +3041,64 @@ h3 {
 .no-border-radius {
   border-radius: 0 !important; }
 
+.gform_wrapper .gfield {
+  margin-bottom: 20px; }
+
+.gform_wrapper .gfield_label {
+  font-family: "Inter Medium", serif;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px; }
+
+.gform_wrapper .ginput_container input[type="text"],
+.gform_wrapper .ginput_container textarea {
+  background-color: #F5F5F5;
+  padding: 15px 10px;
+  border-radius: 5px;
+  width: 100%; }
+
+.gform_wrapper .ginput_container textarea {
+  resize: vertical;
+  min-height: 200px; }
+
+.gform_wrapper .gform_button {
+  background-color: #EC4579;
+  color: #FFFFFF;
+  padding: 12px 15px;
+  cursor: pointer;
+  font-size: 16px; }
+
+.gform_wrapper .gsurvey-rating {
+  height: 24px; }
+
+.gform_wrapper .gsurvey-rating:not(:checked) > label {
+  background-image: url(../images/no-fill-stars.svg);
+  width: 38px;
+  font-size: 0 !important;
+  line-height: 36px;
+  background-size: 36px 36px; }
+
+.gform_wrapper .gsurvey-rating:not(:checked) > label:hover,
+.gform_wrapper .gsurvey-rating:not(:checked) > label:hover ~ label,
+.gform_wrapper .gsurvey-rating > input:checked ~ label {
+  background-image: url(../images/stars.svg);
+  background-size: 36px 36px; }
+
+.gform_wrapper .validation_error {
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb; }
+
+.gform_wrapper .validation_message {
+  font-size: 12px;
+  color: red;
+  margin-top: 5px; }
+
 .button {
   display: inline-flex;
   justify-content: center;
