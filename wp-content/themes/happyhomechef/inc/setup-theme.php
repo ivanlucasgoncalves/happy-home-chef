@@ -17,6 +17,9 @@ add_action(
 		*/
 		add_theme_support( 'title-tag' );
 
+		add_image_size( 'thumbnail_review', 97 );
+		add_image_size( 'thumbnail_post_cols', 670 );
+
 		/*
 		* Enable support for Post Thumbnails on posts and pages.
 		*

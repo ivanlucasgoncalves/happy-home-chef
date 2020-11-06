@@ -86,26 +86,62 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/helloWorld.js":
-/*!******************************!*\
-  !*** ./src/js/helloWorld.js ***!
-  \******************************/
-/*! exports provided: helloWorld */
+/***/ "./src/js/reviews.js":
+/*!***************************!*\
+  !*** ./src/js/reviews.js ***!
+  \***************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "helloWorld", function() { return helloWorld; });
-function helloWorld(text) {
-  // Consoling a text
-  console.log(text); // Testing jquery
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Reviews; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  $('.custom-logo').click(function (e) {
-    e.preventDefault();
-    console.log('Clickedd!');
-  });
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "jquery")))
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Reviews = /*#__PURE__*/function () {
+  function Reviews() {
+    _classCallCheck(this, Reviews);
+
+    this.reviews = document.querySelector('.block-component--reviews');
+    this.btns = this.reviews.querySelectorAll('.button-review');
+    this.reviewBlk = this.reviews.querySelectorAll('.review-blk');
+    this.init();
+  }
+
+  _createClass(Reviews, [{
+    key: "init",
+    value: function init() {
+      var _this = this;
+
+      this.btns.forEach(function (btn) {
+        var btnId = btn.dataset.id;
+        btn.addEventListener('click', function (e) {
+          var selected = document.getElementsByClassName('current-btn-review');
+          selected[0].className = selected[0].className.replace(' current-btn-review', '');
+          btn.className += ' current-btn-review';
+
+          _this.reviewBlk.forEach(function (review) {
+            var reviewId = review.dataset.id;
+
+            if (btnId === reviewId) {
+              review.style.display = 'block';
+            } else {
+              review.style.display = 'none';
+            }
+          });
+        });
+      });
+    }
+  }]);
+
+  return Reviews;
+}();
+
+
 
 /***/ }),
 
@@ -118,13 +154,13 @@ function helloWorld(text) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var _helloWorld__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helloWorld */ "./src/js/helloWorld.js");
+/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var _reviews__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reviews */ "./src/js/reviews.js");
 
 
 (function () {
   "use strict";
 
-  Object(_helloWorld__WEBPACK_IMPORTED_MODULE_0__["helloWorld"])('Hello World!!');
+  new _reviews__WEBPACK_IMPORTED_MODULE_0__["default"]();
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "jquery")))
 

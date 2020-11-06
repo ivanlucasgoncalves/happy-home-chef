@@ -1,0 +1,145 @@
+{
+    "key": "group_5f9fb5d71ce37",
+    "title": "Our Services - Block",
+    "fields": [
+        {
+            "key": "field_5fa11d916a294",
+            "label": "",
+            "name": "repeater_row",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5fa534bd2634a": {
+                    "key": "layout_5fa534bd2634a",
+                    "name": "2_cols",
+                    "label": "2 Cols",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5fa11df06a296",
+                            "label": "",
+                            "name": "repeater_posts_2_cols",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 2,
+                            "max": 2,
+                            "layout": "block",
+                            "button_label": "Add Post",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5fa11dfc6a297",
+                                    "label": "",
+                                    "name": "select_posts",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": "",
+                                    "taxonomy": "",
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "return_format": "id",
+                                    "ui": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5fa535303ec08": {
+                    "key": "layout_5fa535303ec08",
+                    "name": "3_cols",
+                    "label": "3 Cols",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5fa535303ec09",
+                            "label": "",
+                            "name": "repeater_posts_3_cols",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 3,
+                            "max": 3,
+                            "layout": "block",
+                            "button_label": "Add Post",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5fa535303ec0a",
+                                    "label": "",
+                                    "name": "select_posts",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": "",
+                                    "taxonomy": "",
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "return_format": "id",
+                                    "ui": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Layout",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "modified": 1604662755
+}

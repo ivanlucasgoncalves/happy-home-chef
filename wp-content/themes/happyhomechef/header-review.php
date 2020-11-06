@@ -23,13 +23,3 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
-	<header id="masthead" class="site-header">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-auto mt-4 mb-4">
-                    <?php echo file_get_contents( get_template_directory() . '/src/images/logo.svg' ); //phpcs:ignore ?>
-				</div>
-			</div>
-		</div>
-	</header>
-

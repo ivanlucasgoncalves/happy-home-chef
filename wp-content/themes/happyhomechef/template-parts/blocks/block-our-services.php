@@ -19,69 +19,52 @@
 				</svg></p>
 			</div>
 		</div>
-		<div class="row mt-5">
-			<div class="col-md col-lg-6">
-				<div class="card border-radius">
-					<div class="row no-gutters">
-						<div class="col-lg-5 card__img" style="background-image: url(<?php echo esc_attr( get_template_directory_uri() . '/src/images/sample.png' ); ?>)"></div>
-						<div class="col-lg-7">
-							<div class="card__body background--white">
-								<h5 class="card__title">Personal Chef in Home</h5>
-								<p class="card__text">We can prepare up to 100 meals per day, right from your kitchen. Nutritious, delicious food.</p>
-								<a class="button button--pink" href="#">View more and book</a>
-								<img class="d-block align-self-center mt-3" src="<?php echo esc_attr( get_template_directory_uri() . '/src/images/ndis-icon.png' ); ?>" />
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md col-lg-6">
-				<div class="card border-radius">
-					<div class="row no-gutters">
-						<div class="col-lg-5 card__img" style="background-image: url(<?php echo esc_attr( get_template_directory_uri() . '/src/images/sample.png' ); ?>)"></div>
-						<div class="col-lg-7">
-							<div class="card__body background--white">
-								<h5 class="card__title">Personal Chef in Home</h5>
-								<p class="card__text">We can prepare up to 100 meals per day, right from your kitchen. Nutritious, delicious food.</p>
-								<a class="button button--pink" href="#">View more and book</a>
-								<img class="d-block align-self-center mt-3" src="<?php echo esc_attr( get_template_directory_uri() . '/src/images/ndis-icon.png' ); ?>" />
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row justify-content-between mt-5">
-			<div class="col-md col-lg-4">
-				<div class="card border-radius">
-					<div class="card__img" style="background-image: url(<?php echo esc_attr( get_template_directory_uri() . '/src/images/sample.png' ); ?>)"></div>
-					<div class="card__body card__body--more-padding background--white">
-						<h5 class="card__title text-center">Personal Chef in Home</h5>
-						<p class="card__text text-center">We can prepare up to 100 meals per day, right from your kitchen. Nutritious, delicious food.</p>
-					</div>
-					<a class="button button--pink button--large d-flex justify-content-center no-border-radius" href="#">View more</a>
-				</div>
-			</div>
-			<div class="col-md col-lg-4">
-				<div class="card border-radius">
-					<div class="card__img" style="background-image: url(<?php echo esc_attr( get_template_directory_uri() . '/src/images/sample.png' ); ?>)"></div>
-					<div class="card__body card__body--more-padding background--white">
-						<h5 class="card__title text-center">Personal Chef in Home</h5>
-						<p class="card__text text-center">We can prepare up to 100 meals per day, right from your kitchen. Nutritious, delicious food.</p>
-					</div>
-					<a class="button button--pink button--large d-flex justify-content-center no-border-radius" href="#">View more</a>
-				</div>
-			</div>
-			<div class="col-md col-lg-4">
-				<div class="card border-radius">
-					<div class="card__img" style="background-image: url(<?php echo esc_attr( get_template_directory_uri() . '/src/images/sample.png' ); ?>)"></div>
-					<div class="card__body card__body--more-padding background--white">
-						<h5 class="card__title text-center">Personal Chef in Home</h5>
-						<p class="card__text text-center">We can prepare up to 100 meals per day, right from your kitchen. Nutritious, delicious food.</p>
-					</div>
-					<a class="button button--pink button--large d-flex justify-content-center no-border-radius" href="#">View more</a>
-				</div>
-			</div>
-		</div>
+		<?php
+		if ( have_rows( 'our_services_group' ) ) :
+			while ( have_rows( 'our_services_group' ) ) :
+				the_row();
+
+				if ( have_rows( 'repeater_row' ) ) :
+					while ( have_rows( 'repeater_row' ) ) :
+						the_row();
+
+						if ( get_row_layout() === '2_cols' ) :
+
+							if ( have_rows( 'repeater_posts_2_cols' ) ) :
+								?>
+								<div class="row justify-content-between mt-5">
+									<?php
+									while ( have_rows( 'repeater_posts_2_cols' ) ) :
+										the_row();
+										get_template_part( 'template-parts/blocks/parts/2', 'cols' );
+									endwhile;
+									?>
+								</div>
+								<?php
+							endif;
+
+						elseif ( get_row_layout() === '3_cols' ) :
+
+							if ( have_rows( 'repeater_posts_3_cols' ) ) :
+								?>
+								<div class="row justify-content-between mt-5">
+									<?php
+									while ( have_rows( 'repeater_posts_3_cols' ) ) :
+										the_row();
+										get_template_part( 'template-parts/blocks/parts/3', 'cols' );
+									endwhile;
+									?>
+								</div>
+								<?php
+							endif;
+
+						endif;
+
+					endwhile;
+				endif;
+
+			endwhile;
+		endif;
+		?>
 	</div>
 </div>

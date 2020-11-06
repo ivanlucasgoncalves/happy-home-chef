@@ -5,12 +5,19 @@
         .review-stars {
             svg {
                 font-size: 24px;
+                margin-right: 5px;
             }
         }
 
         .button-review {
             background-color: $white;
+            border: 1px solid transparent;
             padding: 15px;
+            cursor: pointer;
+
+            > * {
+                pointer-events: none;
+            }
 
             .button-title,
             .button-date {
@@ -22,9 +29,17 @@
                 font-size: 16px;
             }
 
-            &.current-review {
+            &.current-btn-review {
                 background-color: rgba( $secondary-color, 0.2 );
                 border: 1px solid $secondary-color;
+            }
+        }
+
+        .review-blk {
+            display: none;
+
+            &.current-review {
+                display: block;
             }
         }
 

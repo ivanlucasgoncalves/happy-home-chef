@@ -3175,20 +3175,30 @@ h3 {
     margin-bottom: 0; }
 
 .block-component--reviews .review-stars svg {
-  font-size: 24px; }
+  font-size: 24px;
+  margin-right: 5px; }
 
 .block-component--reviews .button-review {
   background-color: #FFFFFF;
-  padding: 15px; }
+  border: 1px solid transparent;
+  padding: 15px;
+  cursor: pointer; }
+  .block-component--reviews .button-review > * {
+    pointer-events: none; }
   .block-component--reviews .button-review .button-title,
   .block-component--reviews .button-review .button-date {
     text-align: left; }
   .block-component--reviews .button-review .button-title {
     font-family: "Inter Bold", serif;
     font-size: 16px; }
-  .block-component--reviews .button-review.current-review {
+  .block-component--reviews .button-review.current-btn-review {
     background-color: rgba(0, 135, 146, 0.2);
     border: 1px solid #008792; }
+
+.block-component--reviews .review-blk {
+  display: none; }
+  .block-component--reviews .review-blk.current-review {
+    display: block; }
 
 .block-component--reviews .review-content {
   line-height: 22px; }
@@ -3240,6 +3250,9 @@ h3 {
     font-family: "Inter Regular", serif;
     color: #000000;
     display: inline-block; }
+
+.page-template-page-review .custom-content {
+  line-height: 22px; }
 
 
 /*# sourceMappingURL=main.css.map*/

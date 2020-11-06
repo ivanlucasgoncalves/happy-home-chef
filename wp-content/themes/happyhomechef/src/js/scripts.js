@@ -1,10 +1,10 @@
 
-import { helloWorld } from './helloWorld';
+import Reviews from './reviews';
 
 ( function() {
 
     "use strict";
 
-    helloWorld( 'Hello World!!' );
+    new Reviews;
 
 } )( jQuery );
