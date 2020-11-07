@@ -66,5 +66,10 @@
 			endwhile;
 		endif;
 		?>
+		<div class="row justify-content-center mt-5">
+			<div class="col-auto">
+				<a href="<?php echo esc_url( home_url( '/services' ) ); ?>" class="button button--all-services button--large text--underline color--black border-radius d-flex align-items-center justify-content-center">View all services</a>
+			</div>
+		</div>
 	</div>
 </div>

@@ -3018,6 +3018,12 @@ h3 {
 .color--white {
   color: #FFFFFF; }
 
+.color--black {
+  color: #000000; }
+
+.text--underline {
+  text-decoration: underline; }
+
 .fill--primary-color {
   fill: #EC4579; }
 
@@ -3115,7 +3121,13 @@ h3 {
     background-color: #EC4579;
     color: #FFFFFF; }
   .button--large {
-    padding: 15px; }
+    padding: 15px;
+    border-radius: 10px; }
+  .button--all-reviews {
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 16px; }
+  .button--all-services {
+    font-size: 16px; }
 
 .card--cols-3 {
   max-width: 340px; }
@@ -3135,7 +3147,8 @@ h3 {
   line-height: 22px; }
 
 .card__body {
-  padding: 20px; }
+  padding: 20px;
+  min-height: 120px; }
   .card__body--more-padding {
     padding: 20px 30px; }
   .card__body > * {
@@ -3185,6 +3198,11 @@ h3 {
   cursor: pointer; }
   .block-component--reviews .button-review > * {
     pointer-events: none; }
+  .block-component--reviews .button-review .button-img img {
+    width: 97px;
+    height: 70px;
+    -o-object-fit: cover;
+       object-fit: cover; }
   .block-component--reviews .button-review .button-title,
   .block-component--reviews .button-review .button-date {
     text-align: left; }

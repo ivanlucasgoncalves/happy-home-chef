@@ -47,6 +47,7 @@
 				/* Restore original Post Data */
 				wp_reset_postdata();
 				?>
+				<a href="<?php echo esc_url( home_url( '/reviews' ) ); ?>" class="button button--all-reviews button--large border-radius text--underline color--black d-flex align-items-center justify-content-center w-100">View all reviews</a>
 			</div>
 			<div class="col-12 col-md-7 col-lg-8">
 				<?php
@@ -60,7 +61,7 @@
 								<?php hcc_reviews( get_the_ID() ); ?>
 							</div>
 							<h3 class="mb-3 pl-0 pl-lg-5"><?php echo esc_html( get_the_title() ); ?></h3>
-							<p class="review-content pl-0 pl-lg-5"><?php echo hcc_custom_excerpt( get_the_content(), 45 ); //phpcs:ignore ?></p>
+							<p class="review-content pl-0 pl-lg-5"><?php echo hcc_custom_excerpt( get_the_content(), 65 ); //phpcs:ignore ?></p>
 						</div>
 						<?php
 						$count++;

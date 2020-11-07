@@ -19,6 +19,12 @@
                 pointer-events: none;
             }
 
+            .button-img img {
+                width: 97px;
+                height: 70px;
+                object-fit: cover;
+            }
+
             .button-title,
             .button-date {
                 text-align: left;

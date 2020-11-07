@@ -19,5 +19,14 @@
 
     &--large {
         padding: 15px;
+        border-radius: 10px;
+    }
+
+    &--all-reviews {
+        background-color: rgba( $black, 0.1 );
+        font-size: 16px;
+    }
+    &--all-services {
+        font-size: 16px;
     }
 }

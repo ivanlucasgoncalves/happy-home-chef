@@ -22,6 +22,16 @@
     &--white {
         color: $white;
     }
+    &--black {
+        color: $black;
+    }
+}
+
+// Text
+.text {
+    &--underline {
+        text-decoration: underline;
+    }
 }
 
 //SVG fills
