@@ -13,7 +13,7 @@ $top_hero = get_field( 'top_hero_group' );
 <div class="block-component block-component--top-hero">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-lg-5">
+			<div class="col-12 col-lg-6">
 				<div class="d-flex flex-column justify-content-between h-100">
 					<div class="top-hero--left-content">
 						<a class="d-none d-sm-inline-block" href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -51,9 +51,13 @@ $top_hero = get_field( 'top_hero_group' );
 					<?php endif; ?>
 				</div>
 			</div>
-			<div class="col-12 col-lg-7 mt-5 mt-lg-0">
-				<div class="top-hero--right-content d-flex justify-content-center align-items-center background--green h-100">
-					<?php echo do_shortcode( '[tb-calendar booking="happy-home-cooking" slot_style="1" nofilter="yes" notimezone="yes"]' ); ?>   
+			<div class="col-12 col-lg-6 mt-5 mt-lg-0 top-hero--right-content">
+				<div class="d-flex justify-content-center align-items-end h-100">
+					<div class="background-image-top-hero" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/src/images/sample3.png' ); ?>)"></div>
+					<div class="calendar-container">
+						<span class="book-now-heading">Book now</span>
+						<?php echo do_shortcode( '[tb-calendar booking="happy-home-cooking" slot_style="1" nofilter="yes" notimezone="yes"]' ); ?>   
+					</div>
 				</div>
 			</div>
 		</div>

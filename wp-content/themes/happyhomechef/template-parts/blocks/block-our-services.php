@@ -10,7 +10,7 @@
 ?>
 
 <div class="block-component block-component--our-services background--light-grey">
-	<div class="container">
+	<div class="container pt-5">
 		<div class="row">
 			<div class="col">
 				<h2 class="dots dots--top mb-2">Our services</h2>

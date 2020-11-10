@@ -17,7 +17,7 @@ $post_content   = hcc_custom_excerpt( get_the_content( $sel_post_id ), 10 ); ?>
 <div class="col-md col-lg-4">
 	<div class="card border-radius">
 		<div class="card__img" style="background-image: url(<?php echo esc_attr( $post_thumb ); ?>)"></div>
-		<div class="card__body card__body--more-padding background--white">
+		<div class="card__body background--white">
 			<h5 class="card__title text-center"><?php echo esc_html( $post_title ); ?></h5>
 			<p class="card__text text-center"><?php echo $post_excerpt; //phpcs:ignore ?></p>
 		</div>

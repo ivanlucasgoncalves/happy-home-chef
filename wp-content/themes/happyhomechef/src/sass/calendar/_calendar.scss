@@ -1,3 +1,23 @@
+.calendar-container {
+    position: relative;
+    z-index: 2;
+
+    .book-now-heading {
+        padding: 12px 20px;
+        background: $primary-color;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+        color: $white;
+        font-family: $inter-medium;
+        margin: 0 auto;
+        position: absolute;
+        top: -20px;
+        z-index: 2;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
 .calendar_main_container {
     margin-bottom: 0 !important;
     width: 320px;
@@ -10,13 +30,14 @@
 
     .tb-frontend-calendar {
         border: none;
+        padding: 35px 10px 10px 10px;
 
         .tbk-main-calendar-navigation {
             padding: 5px 0 !important;
         }
 
         .tbk-row:first-child > .tbk-column {
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .tbk-calendar-year-selector,
