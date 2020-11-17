@@ -3371,8 +3371,8 @@ h3 {
       display: flex;
       justify-content: center; } }
   .main-navigation .menu li {
-    margin-left: 20px;
-    margin-right: 20px; }
+    margin-left: 15px;
+    margin-right: 15px; }
     .main-navigation .menu li a {
       font-family: "Inter Medium", serif;
       font-size: 15px;
