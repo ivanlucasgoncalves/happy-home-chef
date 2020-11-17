@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-export default class TopHero {
-    constructor() {
-        this.mainContainer = document.querySelector( '.block-component--top-hero > .container' ).offsetWidth;
+class TopHero {
+    constructor( el ) {
+        this.mainContainer = el.offsetWidth;
         this.windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         this.topHeroRightContainer = document.querySelector( '.top-hero--right-content' ).offsetWidth;
         this.backgroundImageContainer = document.querySelector( '.background-image-top-hero' );
@@ -26,4 +26,9 @@ export default class TopHero {
         const totalWidth = parseInt( totalContainer + topHeroRightContainer );
         this.backgroundImageContainer.style.width = totalWidth + 'px';
     }
+}
+
+const topHero = document.querySelector( '.block-component--top-hero > .container' );
+if ( null !== topHero ) {
+    new TopHero( topHero );
 }

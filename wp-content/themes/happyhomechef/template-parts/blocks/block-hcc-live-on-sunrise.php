@@ -7,7 +7,7 @@
  * @package HCC Theme
  */
 
-$hcc_live_on_sunrise = get_field( 'hcc_live_on_sunrise_group' );
+$hcc_live_on_sunrise = get_field( 'hcc_live_on_sunrise_group', 'option' );
 ?>
 
 <div class="block-component block-component--hcc-live-on-sunrise background--green">
@@ -15,7 +15,7 @@ $hcc_live_on_sunrise = get_field( 'hcc_live_on_sunrise_group' );
 		<div class="row align-items-center">
 			<div class="col-lg-6 video-content">
 				<div class="embed-responsive embed-responsive-16by9 border-radius">
-					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/XF3tZW9isbM?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/XF3tZW9isbM?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 				</div>
 			</div>
 			<div class="col-lg-6 text-content mt-4 mt-lg-0">

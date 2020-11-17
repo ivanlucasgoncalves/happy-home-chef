@@ -1,0 +1,24 @@
+.site-footer {
+
+    &__top {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__bottom {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    
+
+}

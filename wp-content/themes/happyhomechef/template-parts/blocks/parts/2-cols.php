@@ -14,7 +14,7 @@ $post_thumb     = get_the_post_thumbnail_url( $sel_post_id, 'thumbnail_post_cols
 $post_excerpt   = hcc_custom_excerpt( get_the_excerpt( $sel_post_id ), 10 );
 $post_content   = hcc_custom_excerpt( get_the_content( $sel_post_id ), 10 ); ?>
 
-<div class="col-md col-lg-6">
+<div class="col-md col-lg-6 mt-4 mt-md-5">
 	<div class="card border-radius h-100">
 		<div class="row no-gutters h-100">
 			<div class="col-lg-5 card__img" style="background-image: url(<?php echo esc_attr( $post_thumb ); ?>)"></div>

@@ -1,38 +1,94 @@
+.hamburger-click {
+    width: 28px;
+
+    > * {
+        pointer-events: none;
+    }
+}
+
 .main-navigation {
     margin-top: 20px;
     margin-bottom: 20px;
 
+    @include media-breakpoint-down(sm) {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: #fff;
+        z-index: 2;
+        top: 100px;
+        left: 0;
+    }
+
+    &.active {
+        display: block !important;
+    }
+
     .menu {
-        display: flex;
-        justify-content: center;
+        @include media-breakpoint-up(md) {
+            display: flex;
+            justify-content: center;
+        }
 
         li {
             margin-left: 20px;
             margin-right: 20px;
+
             a {
                 font-family: $inter-medium;
                 font-size: 15px;
                 color: $black;
                 position: relative;
 
-                &:after {
-                    content: "";
-                    background-color: $primary-color;
-                    position: absolute;
-                    right: 0;
-                    bottom: -5px;
-                    left: 0;
-                    width: 0;
-                    height: 2px;
-                    transition: all .2s ease;
-                }
-                &:hover {
-                    &::after {
-                        width: 100%;
+                @include media-breakpoint-up(md) {
+                    &:after {
+                        content: "";
+                        background-color: $primary-color;
+                        position: absolute;
+                        right: 0;
+                        bottom: -5px;
+                        left: 0;
+                        width: 0;
+                        height: 2px;
+                        transition: all .2s ease;
+                    }
+                    &:hover {
+                        &::after {
+                            width: 100%;
+                        }
                     }
                 }
-                
-                
+            }
+
+            &.current_page_item,
+            &.current-menu-item {
+                a {
+                    @include media-breakpoint-up(md) {
+                        &:after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                text-align: right;
+                margin-bottom: 35px;
+
+                a {
+                    font-size: 34px;
+
+                    &::after {
+                        content: '';
+                        height: 2px;
+                        width: 40px;
+                        background-color: $secondary-color;
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        bottom: -19px;
+                    }
+                }
             }
         }
     }

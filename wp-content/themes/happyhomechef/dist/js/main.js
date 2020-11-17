@@ -86,27 +86,202 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/reviews.js":
-/*!***************************!*\
-  !*** ./src/js/reviews.js ***!
-  \***************************/
+/***/ "./src/js/facebook-app.js":
+/*!********************************!*\
+  !*** ./src/js/facebook-app.js ***!
+  \********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Reviews; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return FacebookApp; });
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+/* eslint-disable no-console */
+
+/* eslint-disable no-undef */
+var FacebookApp = /*#__PURE__*/function () {
+  function FacebookApp($) {
+    _classCallCheck(this, FacebookApp);
+
+    this.init($);
+  }
+
+  _createClass(FacebookApp, [{
+    key: "init",
+    value: function init($) {// $.ajaxSetup( { cache: true } );
+      // $.getScript( 'https://connect.facebook.net/en_US/sdk.js', () => {
+      //     FB.init( {
+      //         appId: '403490087355999',
+      //         version: 'v9.0',
+      //     } );
+      //     FB.getLoginStatus( updateStatusCallback );
+      //     // this.getPosts();
+      // } );
+      // function updateStatusCallback() {
+      //     fetch( 'https://graph.facebook.com/v9.0/me?fields=id,name&access_token=EAALKSb6Q3XgBABswJwZAsLzKrvtkQEVb3EWZBX48rKZA4UX8uDUQFvf4ysL1PZAvNgKH9BIB36IKvRXBejgsTy2D0qxR9Iz1suxmsL219dGwZBqZBceJ6qHbeG6EsU1uNekJaoXLsrc8B4NrMKy1mZA0oADLQYmShhvEDSx9wzujMCaL9ReeUHkZBZANFkar5cTwZD' )
+      //         .then( ( response ) => response.json() )
+      //         .then( ( data ) => console.log( data ) );
+      // }
+    }
+  }, {
+    key: "getPosts",
+    value: function getPosts() {
+      fetch('https://graph.facebook.com/3477446135657556/feed?fields=attachments&access_token=EAALKSb6Q3XgBABswJwZAsLzKrvtkQEVb3EWZBX48rKZA4UX8uDUQFvf4ysL1PZAvNgKH9BIB36IKvRXBejgsTy2D0qxR9Iz1suxmsL219dGwZBqZBceJ6qHbeG6EsU1uNekJaoXLsrc8B4NrMKy1mZA0oADLQYmShhvEDSx9wzujMCaL9ReeUHkZBZANFkar5cTwZD').then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        return console.log(data);
+      });
+    }
+  }]);
+
+  return FacebookApp;
+}();
+
+
+
+/***/ }),
+
+/***/ "./src/js/footer-mob-menu.js":
+/*!***********************************!*\
+  !*** ./src/js/footer-mob-menu.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/* eslint-disable no-undef */
+var MenuMobileFooter = /*#__PURE__*/function () {
+  function MenuMobileFooter(el) {
+    _classCallCheck(this, MenuMobileFooter);
+
+    this.footer = el;
+    this.widgetNavs = this.footer.querySelectorAll('.widget_nav_menu');
+    this.init();
+  }
+
+  _createClass(MenuMobileFooter, [{
+    key: "init",
+    value: function init() {
+      this.widgetNavs.forEach(function (element) {
+        var click = element.querySelector('.widget-title');
+        click.addEventListener('click', function (el) {
+          var menu = el.target.nextElementSibling.firstChild;
+
+          if (!menu.classList.contains('active')) {
+            menu.classList.add('active');
+          } else {
+            menu.classList.remove('active');
+          }
+        });
+      });
+    }
+  }]);
+
+  return MenuMobileFooter;
+}();
+
+var footer = document.querySelector('.site-footer');
+
+if (null !== footer) {
+  new MenuMobileFooter(footer);
+}
+
+/***/ }),
+
+/***/ "./src/js/main-mob-menu.js":
+/*!*********************************!*\
+  !*** ./src/js/main-mob-menu.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/* eslint-disable no-undef */
+var MainMobileMenu = /*#__PURE__*/function () {
+  function MainMobileMenu(el) {
+    _classCallCheck(this, MainMobileMenu);
+
+    this.mainMenu = el;
+    this.body = document.querySelector('body');
+    this.hamburgerClick = document.querySelector('.hamburger-click');
+    this.hamburgerIcon = document.querySelector('.hamb');
+    this.closeIcon = document.querySelector('.close');
+    this.init();
+  }
+
+  _createClass(MainMobileMenu, [{
+    key: "init",
+    value: function init() {
+      var _this = this;
+
+      this.hamburgerClick.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        if (!_this.mainMenu.classList.contains('active')) {
+          _this.mainMenu.classList.add('active');
+
+          _this.hamburgerIcon.style.display = 'none';
+          _this.closeIcon.style.display = 'block';
+          _this.body.style.overflow = 'hidden';
+        } else {
+          _this.mainMenu.classList.remove('active');
+
+          _this.hamburgerIcon.style.display = 'block';
+          _this.closeIcon.style.display = 'none';
+          _this.body.style.overflow = 'inherit';
+        }
+      });
+    }
+  }]);
+
+  return MainMobileMenu;
+}();
+
+var mainMenu = document.querySelector('.main-navigation');
+
+if (null !== mainMenu) {
+  new MainMobileMenu(mainMenu);
+}
+
+/***/ }),
+
+/***/ "./src/js/reviews.js":
+/*!***************************!*\
+  !*** ./src/js/reviews.js ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/* eslint-disable no-unused-vars */
+
+/* eslint-disable no-undef */
 var Reviews = /*#__PURE__*/function () {
-  function Reviews() {
+  function Reviews(el) {
     _classCallCheck(this, Reviews);
 
-    this.reviews = document.querySelector('.block-component--reviews');
+    this.reviews = el;
     this.btns = this.reviews.querySelectorAll('.button-review');
     this.reviewBlk = this.reviews.querySelectorAll('.review-blk');
     this.init();
@@ -117,31 +292,37 @@ var Reviews = /*#__PURE__*/function () {
     value: function init() {
       var _this = this;
 
-      this.btns.forEach(function (btn) {
-        var btnId = btn.dataset.id;
-        btn.addEventListener('click', function (e) {
-          var selected = document.getElementsByClassName('current-btn-review');
-          selected[0].className = selected[0].className.replace(' current-btn-review', '');
-          btn.className += ' current-btn-review';
+      if (null !== this.reviews) {
+        this.btns.forEach(function (btn) {
+          var btnId = btn.dataset.id;
+          btn.addEventListener('click', function (e) {
+            var selected = document.getElementsByClassName('current-btn-review');
+            selected[0].className = selected[0].className.replace(' current-btn-review', '');
+            btn.className += ' current-btn-review';
 
-          _this.reviewBlk.forEach(function (review) {
-            var reviewId = review.dataset.id;
+            _this.reviewBlk.forEach(function (review) {
+              var reviewId = review.dataset.id;
 
-            if (btnId === reviewId) {
-              review.style.display = 'block';
-            } else {
-              review.style.display = 'none';
-            }
+              if (btnId === reviewId) {
+                review.style.display = 'block';
+              } else {
+                review.style.display = 'none';
+              }
+            });
           });
         });
-      });
+      }
     }
   }]);
 
   return Reviews;
 }();
 
+var reviews = document.querySelector('.block-component--reviews');
 
+if (null !== reviews) {
+  new Reviews(reviews);
+}
 
 /***/ }),
 
@@ -155,22 +336,31 @@ var Reviews = /*#__PURE__*/function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var _reviews__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reviews */ "./src/js/reviews.js");
-/* harmony import */ var _sticky_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sticky-header */ "./src/js/sticky-header.js");
-/* harmony import */ var _search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./search */ "./src/js/search.js");
-/* harmony import */ var _top_hero__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./top-hero */ "./src/js/top-hero.js");
+/* harmony import */ var _reviews__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_reviews__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _top_hero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./top-hero */ "./src/js/top-hero.js");
+/* harmony import */ var _top_hero__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_top_hero__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _main_mob_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./main-mob-menu */ "./src/js/main-mob-menu.js");
+/* harmony import */ var _main_mob_menu__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_main_mob_menu__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _footer_mob_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer-mob-menu */ "./src/js/footer-mob-menu.js");
+/* harmony import */ var _footer_mob_menu__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_footer_mob_menu__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _sticky_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sticky-header */ "./src/js/sticky-header.js");
+/* harmony import */ var _search__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./search */ "./src/js/search.js");
+/* harmony import */ var _facebook_app__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./facebook-app */ "./src/js/facebook-app.js");
 /* eslint-disable no-undef */
 
 
 
 
 
-(function () {
+
+
+
+(function ($) {
   'use strict';
 
-  new _reviews__WEBPACK_IMPORTED_MODULE_0__["default"]();
-  new _sticky_header__WEBPACK_IMPORTED_MODULE_1__["default"]();
-  new _search__WEBPACK_IMPORTED_MODULE_2__["default"]();
-  new _top_hero__WEBPACK_IMPORTED_MODULE_3__["default"]();
+  new _sticky_header__WEBPACK_IMPORTED_MODULE_4__["default"]();
+  new _search__WEBPACK_IMPORTED_MODULE_5__["default"]();
+  new _facebook_app__WEBPACK_IMPORTED_MODULE_6__["default"]($);
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "jquery")))
 
@@ -301,12 +491,9 @@ var HeaderAnimation = /*#__PURE__*/function () {
 /*!****************************!*\
   !*** ./src/js/top-hero.js ***!
   \****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return TopHero; });
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -317,10 +504,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 /* eslint-disable no-undef */
 var TopHero = /*#__PURE__*/function () {
-  function TopHero() {
+  function TopHero(el) {
     _classCallCheck(this, TopHero);
 
-    this.mainContainer = document.querySelector('.block-component--top-hero > .container').offsetWidth;
+    this.mainContainer = el.offsetWidth;
     this.windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     this.topHeroRightContainer = document.querySelector('.top-hero--right-content').offsetWidth;
     this.backgroundImageContainer = document.querySelector('.background-image-top-hero');
@@ -358,7 +545,11 @@ var TopHero = /*#__PURE__*/function () {
   return TopHero;
 }();
 
+var topHero = document.querySelector('.block-component--top-hero > .container');
 
+if (null !== topHero) {
+  new TopHero(topHero);
+}
 
 /***/ }),
 

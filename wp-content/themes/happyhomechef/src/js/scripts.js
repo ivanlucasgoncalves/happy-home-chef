@@ -1,15 +1,17 @@
 /* eslint-disable no-undef */
-import Reviews from './reviews';
+import './reviews';
+import './top-hero';
+import './main-mob-menu';
+import './footer-mob-menu';
 import HeaderAnimation from './sticky-header';
 import Search from './search';
-import TopHero from './top-hero';
+import FacebookApp from './facebook-app';
 
-( function() {
+( function( $ ) {
     'use strict';
 
-    new Reviews;
     new HeaderAnimation;
     new Search;
-    new TopHero;
+    new FacebookApp( $ );
 }( jQuery ) );
 

@@ -27,7 +27,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<nav class="main-navigation d-none d-sm-block">
+					<nav class="main-navigation d-none d-md-block">
 						<?php
 						wp_nav_menu(
 							[
@@ -37,6 +37,7 @@
 						);
 						?>
 					</nav><!-- # -->
+					<?php get_template_part( 'template-parts/header/mobile', 'header' ); ?>
 				</div>
 			</div>
 		</div>

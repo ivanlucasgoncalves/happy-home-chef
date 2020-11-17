@@ -16,7 +16,7 @@ $top_hero = get_field( 'top_hero_group' );
 			<div class="col-12 col-lg-6">
 				<div class="d-flex flex-column justify-content-between h-100">
 					<div class="top-hero--left-content">
-						<a class="d-none d-sm-inline-block" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<a class="d-none d-md-inline-block" href="<?php echo esc_url( home_url( '/' ) ); ?>">
                             <?php echo file_get_contents( get_template_directory() . '/src/images/logo.svg' ); //phpcs:ignore ?>
 						</a>
 						<?php
@@ -44,19 +44,19 @@ $top_hero = get_field( 'top_hero_group' );
 					<?php
 					if ( $top_hero['ndis_disclaimer'] ) :
 						?>
-						<p class="d-flex align-items-center">
+						<p class="d-flex align-items-center mt-3">
 							<img class="align-self-center mr-2" src="<?php echo esc_attr( get_template_directory_uri() . '/src/images/ndis-icon.png' ); ?>" />
 							<span class="ndis-disclaimer"><?php echo esc_html( $top_hero['ndis_disclaimer'] ); ?></span>
 						</p>
 					<?php endif; ?>
 				</div>
 			</div>
-			<div class="col-12 col-lg-6 mt-5 mt-lg-0 top-hero--right-content">
+			<div class="col-12 col-lg-6 mt-5 mt-lg-0 top-hero--right-content d-none d-lg-block">
 				<div class="d-flex justify-content-center align-items-end h-100">
-					<div class="background-image-top-hero" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/src/images/sample3.png' ); ?>)"></div>
+					<div class="background-image-top-hero d-none d-sm-block" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/src/images/sample3.png' ); ?>)"></div>
 					<div class="calendar-container">
-						<span class="book-now-heading">Book now</span>
-						<?php echo do_shortcode( '[tb-calendar booking="happy-home-cooking" slot_style="1" nofilter="yes" notimezone="yes"]' ); ?>   
+						<!-- <span class="book-now-heading">Book now</span> -->
+						<?php //echo do_shortcode( '[tb-calendar booking="happy-home-cooking" slot_style="1" nofilter="yes" notimezone="yes"]' ); ?>   
 					</div>
 				</div>
 			</div>

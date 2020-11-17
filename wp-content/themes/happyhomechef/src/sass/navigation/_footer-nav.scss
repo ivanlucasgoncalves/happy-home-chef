@@ -6,13 +6,35 @@
             font-family: $inter-bold;
             color: $black;
             text-transform: uppercase;
-            margin-bottom: 20px;
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 20px;    
+            }
+
+            @include media-breakpoint-down(md) {
+                padding-top: 18px;
+                padding-bottom: 18px;
+                border-top: 1px solid #eee;
+            }
+        }
+
+        &:first-child {
+            @include media-breakpoint-down(md) {
+                .widget-title {
+                    border-top: 0px;
+                }
+            }
         }
 
         .menu {
 
             @include media-breakpoint-down(md) {
                 display: none;
+                margin-bottom: 20px;
+
+                &.active {
+                    display: block;
+                }
             }
 
             li {
@@ -25,6 +47,27 @@
                     font-family: $inter-regular;
                     color: $black;
                     display: inline-block;
+                }
+
+                &.facebook {
+                    a {
+                        &:after {
+                            content: url(../images/facebook-f.svg);
+                            width: 21px;
+                            height: 41px;
+                            display: block;
+                        }
+                    }
+                }
+                &.instagram {
+                    a {
+                        &:after {
+                            content: url(../images/instagram.svg);
+                            width: 41px;
+                            height: 41px;
+                            display: block;
+                        }
+                    }
                 }
             }
         }

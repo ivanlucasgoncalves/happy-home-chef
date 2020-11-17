@@ -49,7 +49,7 @@
 				?>
 				<a href="<?php echo esc_url( home_url( '/reviews' ) ); ?>" class="button button--all-reviews button--large border-radius text--underline color--black d-flex align-items-center justify-content-center w-100">View all reviews</a>
 			</div>
-			<div class="col-12 col-md-7 col-lg-8">
+			<div class="col-12 col-md-7 col-lg-8 mt-5 mt-md-0">
 				<?php
 				$count = 0;
 				if ( $query->have_posts() ) :

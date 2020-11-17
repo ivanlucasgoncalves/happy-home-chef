@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="sticky-header">
+<div class="sticky-header d-none d-md-block">
 	<div class="container">
 		<div class="row justify-content-between align-items-center">
 			<a class="col-auto d-inline-block custom-sticky-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
