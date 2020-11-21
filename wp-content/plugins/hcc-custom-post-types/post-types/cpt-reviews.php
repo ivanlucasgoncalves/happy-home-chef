@@ -58,7 +58,7 @@ function cpt_reviews() {
 		'menu_icon'           => 'dashicons-star-filled',
 		'menu_position'       => 25,
 		'show_in_admin_bar'   => true,
-		'show_in_nav_menus'   => true,
+		'show_in_nav_menus'   => false,
 		'can_export'          => true,
 		'has_archive'         => true,
 		'exclude_from_search' => false,

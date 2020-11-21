@@ -845,6 +845,26 @@ ul {
   .offset-xl-11 {
     margin-left: 91.66667%; } }
 
+.fade {
+  transition: opacity 0.15s linear; }
+  @media (prefers-reduced-motion: reduce) {
+    .fade {
+      transition: none; } }
+  .fade:not(.show) {
+    opacity: 0; }
+
+.collapse:not(.show) {
+  display: none; }
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease; }
+  @media (prefers-reduced-motion: reduce) {
+    .collapsing {
+      transition: none; } }
+
 .d-none {
   display: none !important; }
 
@@ -3255,6 +3275,19 @@ h3 {
     margin-bottom: 15px; }
     .card__body > *:last-child {
       margin-bottom: 0; }
+
+#accordion-menu .card {
+  margin-bottom: 30px; }
+  #accordion-menu .card:last-child {
+    margin-bottom: 0; }
+  #accordion-menu .card .btn-collapse {
+    background-color: #EC4579;
+    border-radius: 4px;
+    width: 38px;
+    height: 38px;
+    color: #FFFFFF;
+    font-size: 18px;
+    cursor: pointer; }
 
 .block-component {
   padding-top: 35px;

@@ -7,6 +7,8 @@ import HeaderAnimation from './sticky-header';
 import Search from './search';
 import FacebookApp from './facebook-app';
 
+import 'bootstrap/js/dist/collapse';
+
 ( function( $ ) {
     'use strict';
 
