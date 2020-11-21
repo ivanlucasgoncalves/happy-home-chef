@@ -3380,6 +3380,14 @@ h3 {
 .block-component--reviews .review-content {
   line-height: 22px; }
 
+.block-component--ndis img {
+  margin: 0 auto; }
+
+.block-component--ndis p {
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 470px; }
+
 .hamburger-click {
   width: 28px; }
   .hamburger-click > * {

@@ -24,5 +24,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 function cpt_load_files() {
 	require_once plugin_dir_path( __FILE__ ) . 'post-types/cpt-reviews.php';
 	require_once plugin_dir_path( __FILE__ ) . 'post-types/cpt-menus.php';
+	require_once plugin_dir_path( __FILE__ ) . 'post-types/cpt-services.php';
 }
 add_action( 'plugins_loaded', 'cpt_load_files' );

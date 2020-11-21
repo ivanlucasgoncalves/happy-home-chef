@@ -21,18 +21,36 @@ get_header();
 		);
 		?>
 		<?php
-
 		$custom_taxonomy = 'menu_categories';
 		$terms           = get_terms( $custom_taxonomy ); // Get all terms of a custom_taxonomy.
 
 		if ( $terms && ! is_wp_error( $terms ) ) :
 			?>
-			<ul>
-				<?php foreach ( $terms as $term ) { ?>
-					<li><a href="<?php echo get_term_link( $term->slug, $custom_taxonomy ); ?>"><?php echo $term->name; ?></a></li>
-				<?php } ?>
-			</ul>
+			<div class="block-component block-component--our-services background--light-grey">
+				<div class="container">
+					<div class="row">
+					<?php foreach ( $terms as $term ) { ?>
+						<div class="col-md col-lg-6">
+							<div class="card border-radius h-100">
+								<div class="row no-gutters h-100">
+									<div class="col-lg-5 card__img" style="background-image: url(<?php //echo esc_attr( $post_thumb ); ?>)"></div>
+									<div class="col-lg-7">
+										<div class="card__body background--white h-100">
+											<h5 class="card__title"><?php echo $term->name; ?></h5>
+											<p class="card__text"><?php //echo $post_excerpt; //phpcs:ignore ?></p>
+											<a class="button button--pink" href="<?php echo esc_attr( get_term_link( $term->slug, $custom_taxonomy ) ); ?>">View more and book</a>
+											<img class="d-block align-self-center mt-3" src="<?php echo esc_attr( get_template_directory_uri() . '/src/images/ndis-icon.png' ); ?>" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<?php } ?>
+					</div>
+				</div>
+			</div>
 		<?php endif; ?>
+		<?php get_template_part( 'template-parts/blocks/block', 'ndis' ); ?>
 	</main>
 
 <?php

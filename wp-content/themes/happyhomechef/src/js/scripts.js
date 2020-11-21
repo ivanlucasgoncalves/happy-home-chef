@@ -5,7 +5,7 @@ import './main-mob-menu';
 import './footer-mob-menu';
 import HeaderAnimation from './sticky-header';
 import Search from './search';
-import FacebookApp from './facebook-app';
+// import FacebookApp from './facebook-app';
 
 import 'bootstrap/js/dist/collapse';
 
@@ -14,6 +14,6 @@ import 'bootstrap/js/dist/collapse';
 
     new HeaderAnimation;
     new Search;
-    new FacebookApp( $ );
+    // new FacebookApp( $ );
 }( jQuery ) );
 

@@ -673,66 +673,6 @@
 
 /***/ }),
 
-/***/ "./src/js/facebook-app.js":
-/*!********************************!*\
-  !*** ./src/js/facebook-app.js ***!
-  \********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return FacebookApp; });
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-/* eslint-disable no-console */
-
-/* eslint-disable no-undef */
-var FacebookApp = /*#__PURE__*/function () {
-  function FacebookApp($) {
-    _classCallCheck(this, FacebookApp);
-
-    this.init($);
-  } // init( $ ) {
-  //     $.ajaxSetup( { cache: true } );
-  //     $.getScript( 'https://connect.facebook.net/en_US/sdk.js', () => {
-  //         FB.init( {
-  //             appId: '403490087355999',
-  //             version: 'v9.0',
-  //         } );
-  //         // FB.getLoginStatus( updateStatusCallback );
-  //         this.getPosts();
-  //     } );
-  //     function updateStatusCallback() {
-  //         fetch( 'https://graph.facebook.com/v9.0/me?fields=id,name&access_token=EAALKSb6Q3XgBABswJwZAsLzKrvtkQEVb3EWZBX48rKZA4UX8uDUQFvf4ysL1PZAvNgKH9BIB36IKvRXBejgsTy2D0qxR9Iz1suxmsL219dGwZBqZBceJ6qHbeG6EsU1uNekJaoXLsrc8B4NrMKy1mZA0oADLQYmShhvEDSx9wzujMCaL9ReeUHkZBZANFkar5cTwZD' )
-  //             .then( ( response ) => response.json() )
-  //             .then( ( data ) => console.log( data ) );
-  //     }
-  // }
-
-
-  _createClass(FacebookApp, [{
-    key: "getPosts",
-    value: function getPosts() {
-      fetch('https://graph.facebook.com/v9.0/me?fields=id,name,feed.limit(3){name,full_picture,description}&access_token=EAAFuZBNtTxl8BACK55XKVi09wZBbMzq8FqmVOoydfIpOWVc254mxSSDaDN0XBey7WuT6xPjWitZAPeKR9IXnvzm15EORrlyLArDZChM456BiaZCBKth3VHgyLZCZBfBdGI1StUkhGV01cWy7Ms4Tc2Mthzq54LAoUfWW7llGYtTYJsFvTCxsZCVNGIbFcilDKlqqnLKtoKyMW7MhL0hZCIQf2k9MN5VGuURmIzPHOoNuQxgZDZD').then(function (response) {
-        return response.json();
-      }).then(function (data) {
-        return console.log(data);
-      });
-    }
-  }]);
-
-  return FacebookApp;
-}();
-
-
-
-/***/ }),
-
 /***/ "./src/js/footer-mob-menu.js":
 /*!***********************************!*\
   !*** ./src/js/footer-mob-menu.js ***!
@@ -931,16 +871,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _footer_mob_menu__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_footer_mob_menu__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _sticky_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sticky-header */ "./src/js/sticky-header.js");
 /* harmony import */ var _search__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./search */ "./src/js/search.js");
-/* harmony import */ var _facebook_app__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./facebook-app */ "./src/js/facebook-app.js");
-/* harmony import */ var bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! bootstrap/js/dist/collapse */ "./node_modules/bootstrap/js/dist/collapse.js");
-/* harmony import */ var bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! bootstrap/js/dist/collapse */ "./node_modules/bootstrap/js/dist/collapse.js");
+/* harmony import */ var bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_6__);
 /* eslint-disable no-undef */
 
 
 
 
 
-
+ // import FacebookApp from './facebook-app';
 
 
 
@@ -948,8 +887,7 @@ __webpack_require__.r(__webpack_exports__);
   'use strict';
 
   new _sticky_header__WEBPACK_IMPORTED_MODULE_4__["default"]();
-  new _search__WEBPACK_IMPORTED_MODULE_5__["default"]();
-  new _facebook_app__WEBPACK_IMPORTED_MODULE_6__["default"]($);
+  new _search__WEBPACK_IMPORTED_MODULE_5__["default"](); // new FacebookApp( $ );
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "jquery")))
 
