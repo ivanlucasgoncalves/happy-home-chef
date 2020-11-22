@@ -6,6 +6,10 @@
             margin-bottom: 0;
         }
 
+        p {
+            line-height: 20px;
+        }
+
         .btn-collapse {
             background-color: $primary-color;
             border-radius: 4px;
@@ -14,6 +18,17 @@
             color: $white;
             font-size: 18px;
             cursor: pointer;
+        }
+
+        .menu-list {
+            li {
+                margin-bottom: 7px;
+                list-style: inside;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 

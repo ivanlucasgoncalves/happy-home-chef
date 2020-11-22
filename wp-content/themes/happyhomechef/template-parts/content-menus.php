@@ -16,7 +16,7 @@
 		</div>
 		<div class="p-3 p-md-4 d-flex align-items-center justify-content-between w-100">
 			<div class="mr-2">
-				<h3 class="mb-2"><?php the_title(); ?></h3>
+				<h4 class="mb-2"><?php the_title(); ?></h4>
 				<?php the_content(); ?>
 			</div>
 			<button class="btn-collapse d-flex align-items-center justify-content-center" type="button" data-toggle="collapse" data-target="#collapse-<?php echo esc_attr( $index ); ?>" aria-expanded="true" aria-controls="collapse-<?php echo esc_attr( $index ); ?>">
@@ -27,12 +27,27 @@
 		</div>
 	</div>
 	<div id="collapse-<?php echo esc_attr( $index ); ?>" class="collapse" aria-labelledby="heading-<?php echo esc_attr( $index ); ?>" data-parent="#accordion-menu">
-		<div class="card-body p-4">
-			<ul>
-				<li>Roast Lamb rubbed with rosemary and garlic</li>
-				<li>Roast beef rubbed with mustard and rosemary</li>
-				<li>Roast Chicken rubbed with lemon, garlic and  thyme, served with pork and apple stuffing</li>
-			</ul>
+		<div class="card-body p-3 p-md-4">
+			<?php
+			if ( have_rows( 'options' ) ) :
+				?>
+				<h4 class="mb-2"><?php echo esc_html( 'Options:' ); ?></h4>
+				<ul class="menu-list">
+					<?php
+					while ( have_rows( 'options' ) ) :
+						the_row();
+						$options_list = get_sub_field( 'options_list' );
+						?>
+
+						<li><?php echo esc_html( $options_list ); ?></li>
+
+						<?php
+					endwhile;
+					?>
+				</ul>
+				<?php
+			endif;
+			?>
 		</div>
 	</div>
 </div>

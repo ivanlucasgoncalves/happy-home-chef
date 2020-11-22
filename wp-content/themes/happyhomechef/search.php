@@ -10,48 +10,53 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area col-8">
-		<main id="main" class="site-main">
-			<?php
-
-			if ( have_posts() ) {
-				?>
-
-				<header class="page-header">
-					<h1 class="page-title">
+	<main id="main" class="site-main">
+		<?php
+		hcc_template_part(
+			'template-parts/header/common-header',
+			array(
+				'title' => 'Search Results',
+			)
+		);
+		?>
+		<div class="background--light-grey pt-5 pb-5">
+			<div class="container">
+				<div class="row justify-content-center">
+					<?php if ( have_posts() ) : ?>
+						<div class="col-12">
+							<h3>
+								<?php
+								/* translators: Search query. */
+								printf( __( 'Search Results for: %s', 'twentyseventeen' ), '<span>' . get_search_query() . '</span>' );
+								?>
+							</h3>
+						</div>
 						<?php
-						/* translators: %s: search query. */
-						printf( esc_html__( 'Search Results for: %s', 'hhc-theme' ), '<span>' . get_search_query() . '</span>' );
+						/* Start the Loop */
+						while ( have_posts() ) :
+							the_post();
+
+							/**
+							 * Run the loop for the search to output the results.
+							 * If you want to overload this in a child theme then include a file
+							 * called content-search.php and that will be used instead.
+							 */
+							get_template_part( 'template-parts/content', 'search' );
+
+						endwhile;
+
+						the_posts_navigation();
 						?>
-					</h1>
-				</header>
+					<?php else : ?>
+						<?php get_template_part( 'template-parts/content', 'none' ); ?>
+					<?php endif; ?>
+				</div>
+			</div>
+		</div>
 
-				<?php
-				/* Start the Loop */
-				while ( have_posts() ) :
-					the_post();
-
-					/**
-					 * Run the loop for the search to output the results.
-					 * If you want to overload this in a child theme then include a file
-					 * called content-search.php and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', 'search' );
-
-				endwhile;
-
-				the_posts_navigation();
-
-			} else {
-
-				get_template_part( 'template-parts/content', 'none' );
-
-			}
-
-			?>
-		</main>
-	</section>
+		<?php get_template_part( 'template-parts/blocks/block', 'reviews' ); ?>
+		<?php get_template_part( 'template-parts/blocks/block', 'hcc-live-on-sunrise' ); ?>
+	</main>
 
 <?php
-get_sidebar();
 get_footer();

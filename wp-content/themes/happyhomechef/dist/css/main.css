@@ -3097,13 +3097,34 @@ h1, h2, h3, h4, h5 {
   font-family: "Inter Bold", serif; }
 
 h1 {
-  font-size: 44px; }
+  font-size: 34px; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 44px; } }
 
 h2 {
-  font-size: 38px; }
+  font-size: 28px; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 38px; } }
 
 h3 {
-  font-size: 26px; }
+  font-size: 24px; }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 26px; } }
+
+h4 {
+  font-size: 20px; }
+  @media (min-width: 768px) {
+    h4 {
+      font-size: 18px; } }
+
+h5 {
+  font-size: 18px; }
+
+h6 {
+  font-size: 16px; }
 
 .dots {
   position: relative;
@@ -3280,6 +3301,8 @@ h3 {
   margin-bottom: 30px; }
   #accordion-menu .card:last-child {
     margin-bottom: 0; }
+  #accordion-menu .card p {
+    line-height: 20px; }
   #accordion-menu .card .btn-collapse {
     background-color: #EC4579;
     border-radius: 4px;
@@ -3288,6 +3311,11 @@ h3 {
     color: #FFFFFF;
     font-size: 18px;
     cursor: pointer; }
+  #accordion-menu .card .menu-list li {
+    margin-bottom: 7px;
+    list-style: inside; }
+    #accordion-menu .card .menu-list li:last-child {
+      margin-bottom: 0; }
 
 .block-component {
   padding-top: 35px;
@@ -3338,6 +3366,9 @@ h3 {
 
 .block-component--hcc-live-on-sunrise .text-content svg {
   font-size: 34px; }
+
+.block-component--hcc-live-on-sunrise .text-content h3 {
+  line-height: 34px; }
 
 .block-component--hcc-live-on-sunrise .text-content p {
   font-size: 15px;
@@ -3501,6 +3532,42 @@ h3 {
 
 .page-template-page-contact .custom-content {
   line-height: 22px; }
+
+.not-found form {
+  display: flex;
+  align-items: center;
+  width: calc( 100% - 25px);
+  padding-right: 20px; }
+  .not-found form input[type="text"] {
+    font-size: 22px;
+    color: #000000;
+    padding: 0;
+    width: 100%;
+    margin-right: 20px;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5px;
+    background-color: #F5F5F5; }
+    .not-found form input[type="text"]::-moz-placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #000000;
+      opacity: 1;
+      /* Firefox */ }
+    .not-found form input[type="text"]:-ms-input-placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #000000;
+      opacity: 1;
+      /* Firefox */ }
+    .not-found form input[type="text"]::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #000000;
+      opacity: 1;
+      /* Firefox */ }
+    .not-found form input[type="text"]:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #000000; }
+    .not-found form input[type="text"]::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: #000000; }
 
 
 /*# sourceMappingURL=main.css.map*/

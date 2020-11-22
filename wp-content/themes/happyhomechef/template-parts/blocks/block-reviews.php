@@ -23,7 +23,7 @@
 		];
 		$query = new WP_Query( $args );
 		?>
-		<div class="row mt-5">
+		<div class="row mt-4 mt-md-5">
 			<div class="col-12 col-md-5 col-lg-4">
 				<?php
 				$count = 0;

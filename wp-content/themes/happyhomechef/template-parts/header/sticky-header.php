@@ -16,7 +16,7 @@
                 <?php echo file_get_contents( get_template_directory() . '/src/images/sticky-logo.svg' ); //phpcs:ignore ?>
 			</a>
 			<div class="d-flex justify-content-end align-items-center">
-				<nav class="col-auto main-navigation">
+				<nav class="col-auto main-navigation pr-0">
 					<?php
 					wp_nav_menu(
 						[

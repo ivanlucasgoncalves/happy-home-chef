@@ -55,7 +55,7 @@ function cpt_menus() {
 		'public'              => true,
 		'show_ui'             => true,
 		'show_in_menu'        => true,
-		'menu_icon'           => 'dashicons-welcome-learn-more',
+		'menu_icon'           => 'dashicons-food',
 		'menu_position'       => 25,
 		'show_in_admin_bar'   => true,
 		'show_in_nav_menus'   => false,

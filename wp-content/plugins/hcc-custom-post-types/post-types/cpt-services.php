@@ -55,7 +55,7 @@ function cpt_services() {
 		'public'              => true,
 		'show_ui'             => true,
 		'show_in_menu'        => true,
-		'menu_icon'           => 'dashicons-star-filled',
+		'menu_icon'           => 'dashicons-products',
 		'menu_position'       => 25,
 		'show_in_admin_bar'   => true,
 		'show_in_nav_menus'   => false,
