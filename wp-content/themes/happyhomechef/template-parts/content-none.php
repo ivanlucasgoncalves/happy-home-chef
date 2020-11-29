@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="col-12 col-md-auto no-results not-found">
+<div class="col-12 col-md-auto no-results not-found mt-5 mb-5">
 	<h2 class="page-title"><?php esc_html_e( 'Nothing Found', 'hhc-theme' ); ?></h2>
 	<div class="page-content mt-2">
 		<?php if ( is_search() ) : ?>

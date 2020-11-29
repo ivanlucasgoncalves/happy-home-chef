@@ -24,6 +24,7 @@ get_header();
 			</div>
 		</div>
 	</div>
+	<?php get_template_part( 'template-parts/blocks/block-social', 'media' ); ?>
 
 <?php
 get_footer();

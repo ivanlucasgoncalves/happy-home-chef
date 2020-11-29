@@ -9,23 +9,20 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header>
+<div class="background--white pt-3 pb-5">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-lg-10">
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<?php //the_post_thumbnail(); ?>
 
-	<?php the_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
-		the_content();
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'hhc-theme' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+					<div class="entry-content">
+						<?php
+						the_content();
+						?>
+					</div>
+			</article>
+			</div>
+		</div>
 	</div>
-</article>
+</div>

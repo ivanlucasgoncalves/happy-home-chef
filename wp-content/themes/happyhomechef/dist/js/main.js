@@ -787,6 +787,49 @@ if (null !== mainMenu) {
 
 /***/ }),
 
+/***/ "./src/js/menu-accordion.js":
+/*!**********************************!*\
+  !*** ./src/js/menu-accordion.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MenuAccordion; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/* eslint-disable no-undef */
+var MenuAccordion = /*#__PURE__*/function () {
+  function MenuAccordion($) {
+    _classCallCheck(this, MenuAccordion);
+
+    this.init($);
+  }
+
+  _createClass(MenuAccordion, [{
+    key: "init",
+    value: function init($) {
+      $('.collapse').on('show.bs.collapse', function () {
+        $(this).siblings('.card-header').addClass('active-panel');
+      });
+      $('.collapse').on('hide.bs.collapse', function () {
+        $(this).siblings('.card-header').removeClass('active-panel');
+      });
+    }
+  }]);
+
+  return MenuAccordion;
+}();
+
+
+
+/***/ }),
+
 /***/ "./src/js/reviews.js":
 /*!***************************!*\
   !*** ./src/js/reviews.js ***!
@@ -861,19 +904,21 @@ if (null !== reviews) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var _reviews__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reviews */ "./src/js/reviews.js");
-/* harmony import */ var _reviews__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_reviews__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _top_hero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./top-hero */ "./src/js/top-hero.js");
-/* harmony import */ var _top_hero__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_top_hero__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _main_mob_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./main-mob-menu */ "./src/js/main-mob-menu.js");
-/* harmony import */ var _main_mob_menu__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_main_mob_menu__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _footer_mob_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer-mob-menu */ "./src/js/footer-mob-menu.js");
-/* harmony import */ var _footer_mob_menu__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_footer_mob_menu__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _sticky_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sticky-header */ "./src/js/sticky-header.js");
-/* harmony import */ var _search__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./search */ "./src/js/search.js");
-/* harmony import */ var bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! bootstrap/js/dist/collapse */ "./node_modules/bootstrap/js/dist/collapse.js");
-/* harmony import */ var bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_6__);
+/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/js/dist/collapse */ "./node_modules/bootstrap/js/dist/collapse.js");
+/* harmony import */ var bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _reviews__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./reviews */ "./src/js/reviews.js");
+/* harmony import */ var _reviews__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_reviews__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _top_hero__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./top-hero */ "./src/js/top-hero.js");
+/* harmony import */ var _top_hero__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_top_hero__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _main_mob_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./main-mob-menu */ "./src/js/main-mob-menu.js");
+/* harmony import */ var _main_mob_menu__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_main_mob_menu__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _footer_mob_menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./footer-mob-menu */ "./src/js/footer-mob-menu.js");
+/* harmony import */ var _footer_mob_menu__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_footer_mob_menu__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _sticky_header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sticky-header */ "./src/js/sticky-header.js");
+/* harmony import */ var _search__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./search */ "./src/js/search.js");
+/* harmony import */ var _menu_accordion__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./menu-accordion */ "./src/js/menu-accordion.js");
 /* eslint-disable no-undef */
+
 
 
 
@@ -886,8 +931,9 @@ __webpack_require__.r(__webpack_exports__);
 (function ($) {
   'use strict';
 
-  new _sticky_header__WEBPACK_IMPORTED_MODULE_4__["default"]();
-  new _search__WEBPACK_IMPORTED_MODULE_5__["default"](); // new FacebookApp( $ );
+  new _sticky_header__WEBPACK_IMPORTED_MODULE_5__["default"]();
+  new _search__WEBPACK_IMPORTED_MODULE_6__["default"]();
+  new _menu_accordion__WEBPACK_IMPORTED_MODULE_7__["default"]($);
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "jquery")))
 

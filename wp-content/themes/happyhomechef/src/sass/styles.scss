@@ -32,9 +32,10 @@
 @import "~bootstrap/scss/utilities/text";
 
 // =============================================================================
-// Variables
+// Variables / Mixins
 // =============================================================================
 @import './vars';
+@import './mixins';
 
 // =============================================================================
 // Calendar
@@ -77,6 +78,7 @@
 @import './blocks/hcc-live-on-sunrise-block';
 @import './blocks/reviews-block';
 @import './blocks/ndis-blocks';
+@import './blocks/book-now';
 
 // =============================================================================
 // Navigation
@@ -90,3 +92,14 @@
 @import './pages/review';
 @import './pages/contact';
 @import './pages/not-found';
+@import './pages/search-results';
+@import './pages/single-pages';
+
+// WP Admin Bar Fixes
+@media screen and (max-width: 600px) {
+    #wpadminbar {
+        top: -51px;
+    }
+}
+
+

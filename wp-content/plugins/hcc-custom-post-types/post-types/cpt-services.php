@@ -64,10 +64,6 @@ function cpt_services() {
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
-		'rewrite'             => array(
-			'slug'       => 'service',
-			'with_front' => true,
-		),
 	);
 	register_post_type( 'services', $args );
 

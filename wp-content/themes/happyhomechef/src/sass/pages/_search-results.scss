@@ -1,0 +1,45 @@
+.search-results {
+
+    .card {
+        &__text {
+            p {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    .navigation li a,
+    .navigation li a:hover,
+    .navigation li.active a,
+    .navigation li.disabled {
+        color: $white;
+        text-decoration:none;
+    }
+    
+    .navigation li {
+        display: inline-flex;
+    }
+    
+    .navigation li a,
+    .navigation li a:hover,
+    .navigation li.active a,
+    .navigation li.disabled {
+        background-color: $primary-color;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 0.75rem 0.85rem;
+        min-width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $inter-medium;
+    }
+    
+    .navigation li a:hover,
+    .navigation li.active a {
+        background-color: $secondary-color;
+    }
+
+}
+

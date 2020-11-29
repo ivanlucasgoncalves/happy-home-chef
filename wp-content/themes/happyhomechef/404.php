@@ -10,25 +10,23 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area col-12">
-		<main id="main" class="site-main">
-
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'hhc-theme' ); ?></h1>
-				</header>
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'hhc-theme' ); ?></p>
-
-					<?php
-					get_search_form();
-					?>
+	<main id="main" class="site-main">
+		<?php
+		hcc_template_part(
+			'template-parts/header/common-header',
+			array(
+				'title' => 'Oops!!',
+			)
+		);
+		?>
+		<div class="background--light-grey pt-5 pb-5">
+			<div class="container">
+				<div class="row justify-content-center">
+					<?php get_template_part( 'template-parts/content', 'none' ); ?>
 				</div>
-			</section>
-
-		</main>
-	</div>
+			</div>
+		</div>
+	</main>
 
 <?php
 get_footer();

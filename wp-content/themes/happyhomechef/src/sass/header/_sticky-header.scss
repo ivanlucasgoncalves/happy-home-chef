@@ -12,6 +12,8 @@
     transition: transform .25s ease-in-out .1s;
     box-shadow: 0 5px 15px rgba(0,0,0,.05);
 
+    @include admin-sticky-fix();
+
     &.show-sticky {
         transform: translateY(0);
     }

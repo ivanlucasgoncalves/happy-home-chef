@@ -6,6 +6,17 @@
  */
 
 /**
+ * Set the length in words of the standard generated excerpt.
+ *
+ * @param int $length The maximum number of words.
+ */
+function artshub_set_excerpt_length( $length ) {
+	return 10;
+}
+// Make sure to set the priority correctly, such as 999, otherwise the default WordPress filter on this function will run last and override what you set here.
+add_filter( 'excerpt_length', 'artshub_set_excerpt_length', 999 );
+
+/**
  * Filter the excerpt "read more" string.
  *
  * @param string $more "Read more" excerpt string.

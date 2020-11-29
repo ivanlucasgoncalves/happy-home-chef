@@ -12,7 +12,6 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<?php get_template_part( 'template-parts/footer/social-media', 'footer' ); ?>
 		<div class="site-footer__top">
 			<div class="container">
 				<div class="row justify-content-between">

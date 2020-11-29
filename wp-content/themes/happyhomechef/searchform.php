@@ -9,7 +9,10 @@
 
 ?>
 
-<form action="/" method="get">
-	<input type="text" name="s" id="input-search" placeholder="Type to search" value="<?php the_search_query(); ?>" autocomplete="off" />
-	<input type="image" alt="Search" src="<?php bloginfo( 'template_url' ); ?>/src/images/search-submit.svg" />
+<form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+	<input type="text" name="s" id="input-search" placeholder="Type to search" value="<?php echo get_search_query(); ?>" autocomplete="off" />
+	<div class="submit-button">
+		<img src="<?php bloginfo( 'template_url' ); ?>/src/images/search-submit.svg" />
+		<input type="submit" alt="Search" />
+	</div>
 </form>

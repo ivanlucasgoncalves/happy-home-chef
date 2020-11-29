@@ -47,7 +47,7 @@ function tax_menu_categories() {
 		'show_in_nav_menus' => false,
 		'show_tagcloud'     => true,
 		'rewrite'           => array(
-			'slug'       => 'menu',
+			'slug'       => 'menus',
 			'with_front' => true,
 		),
 	);

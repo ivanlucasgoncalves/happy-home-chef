@@ -21,6 +21,7 @@ get_header();
 		<?php get_template_part( 'template-parts/blocks/block', 'reviews' ); ?>
 		<?php get_template_part( 'template-parts/blocks/block', 'hcc-live-on-sunrise' ); ?>
 	</main>
+	<?php get_template_part( 'template-parts/blocks/block-social', 'media' ); ?>
 
 <?php
 get_footer();

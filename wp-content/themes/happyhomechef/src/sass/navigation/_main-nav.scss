@@ -14,10 +14,12 @@
         position: fixed;
         width: 100vw;
         height: 100vh;
-        background: #fff;
+        background: $white;
         z-index: 2;
-        top: 100px;
+        top: 0;
         left: 0;
+        padding-top: 108px;
+        margin-top: 5px;
     }
 
     &.active {

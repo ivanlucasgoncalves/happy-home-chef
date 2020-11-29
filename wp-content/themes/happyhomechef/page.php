@@ -15,25 +15,26 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area col-8">
-		<main id="main" class="site-main">
-			<?php
+	<main id="main" class="site-main">
+		<?php
+		hcc_template_part(
+			'template-parts/header/common-header',
+			array(
+				'title' => get_the_title(),
+			)
+		);
+		?>
+		<?php
 
-			while ( have_posts() ) :
-				the_post();
+		while ( have_posts() ) :
+			the_post();
 
-				get_template_part( 'template-parts/content', 'page' );
+			get_template_part( 'template-parts/content', 'page' );
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-			endwhile; // End of the loop.
-			?>
-		</main>
-	</div>
+		endwhile; // End of the loop.
+		?>
+	</main>
+	<?php get_template_part( 'template-parts/blocks/block-social', 'media' ); ?>
 
 <?php
-get_sidebar();
 get_footer();

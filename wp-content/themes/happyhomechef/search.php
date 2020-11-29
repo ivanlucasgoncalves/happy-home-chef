@@ -45,7 +45,7 @@ get_header();
 
 						endwhile;
 
-						the_posts_navigation();
+						wp_numeric_posts_nav();
 						?>
 					<?php else : ?>
 						<?php get_template_part( 'template-parts/content', 'none' ); ?>
@@ -53,9 +53,6 @@ get_header();
 				</div>
 			</div>
 		</div>
-
-		<?php get_template_part( 'template-parts/blocks/block', 'reviews' ); ?>
-		<?php get_template_part( 'template-parts/blocks/block', 'hcc-live-on-sunrise' ); ?>
 	</main>
 
 <?php
