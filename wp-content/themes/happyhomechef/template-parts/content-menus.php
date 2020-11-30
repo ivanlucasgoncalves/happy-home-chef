@@ -15,7 +15,7 @@
 			<?php the_post_thumbnail( 'thumbnail_menus' ); ?>
 		</div>
 		<div class="p-3 p-md-4 d-flex align-items-center justify-content-between w-100">
-			<div class="mr-2">
+			<div class="mr-3">
 				<h4 class="mb-2"><?php the_title(); ?></h4>
 				<?php the_content(); ?>
 			</div>

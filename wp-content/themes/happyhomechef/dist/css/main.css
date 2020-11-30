@@ -3136,10 +3136,10 @@ h3 {
       font-size: 26px; } }
 
 h4 {
-  font-size: 20px; }
+  font-size: 18px; }
   @media (min-width: 768px) {
     h4 {
-      font-size: 18px; } }
+      font-size: 20px; } }
 
 h5 {
   font-size: 18px; }
@@ -3269,6 +3269,20 @@ h6 {
   color: red;
   margin-top: 5px; }
 
+.gform_confirmation_wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center; }
+  .gform_confirmation_wrapper .gform_confirmation_message {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem; }
+
 .button {
   display: inline-flex;
   justify-content: center;
@@ -3323,11 +3337,17 @@ h6 {
   #accordion-menu .card:last-child {
     margin-bottom: 0; }
   #accordion-menu .card p {
+    font-size: 14px;
     line-height: 20px; }
+    @media (min-width: 768px) {
+      #accordion-menu .card p {
+        font-size: 15px;
+        line-height: 22px; } }
   #accordion-menu .card .btn-collapse {
     background-color: #EC4579;
     border: 2px solid #EC4579;
     border-radius: 4px;
+    min-width: 38px;
     width: 38px;
     height: 38px;
     color: #FFFFFF;
@@ -3347,9 +3367,25 @@ h6 {
       display: block; }
   #accordion-menu .card .menu-list li {
     margin-bottom: 7px;
-    list-style: inside; }
+    list-style: inside;
+    font-size: 14px;
+    line-height: 20px; }
+    @media (min-width: 768px) {
+      #accordion-menu .card .menu-list li {
+        font-size: 15px;
+        line-height: 22px; } }
     #accordion-menu .card .menu-list li:last-child {
       margin-bottom: 0; }
+
+.review-stars svg {
+  font-size: 24px;
+  margin-right: 5px; }
+
+.placeholder--review {
+  font-size: 60px; }
+
+.placeholder--btn-review {
+  font-size: 40px; }
 
 .block-component {
   padding-top: 35px;
@@ -3410,10 +3446,6 @@ h6 {
   margin-bottom: 15px; }
   .block-component--hcc-live-on-sunrise .text-content p:last-child {
     margin-bottom: 0; }
-
-.block-component--reviews .review-stars svg {
-  font-size: 24px;
-  margin-right: 5px; }
 
 .block-component--reviews .button-review {
   background-color: #FFFFFF;
