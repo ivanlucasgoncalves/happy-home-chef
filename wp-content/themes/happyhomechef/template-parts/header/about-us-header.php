@@ -23,7 +23,7 @@
 			</div>
 			<div class="col-12 col-lg-6 mt-5 mt-lg-0 top-hero--right-content d-none d-lg-block">
 				<div class="d-flex justify-content-center align-items-end h-100">
-					<div class="background-image-top-hero d-none d-sm-block" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/src/images/sample3.png' ); ?>)"></div>
+					<div class="background-image-top-hero d-none d-sm-block" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/src/images/sample3-min.png' ); ?>)"></div>
 				</div>
 			</div>
 		</div>

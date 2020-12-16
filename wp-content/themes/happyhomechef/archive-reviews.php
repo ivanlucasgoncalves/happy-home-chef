@@ -11,16 +11,15 @@ get_header();
 ?>
 
 	<main id="main" class="site-main">
+		<?php
+		hcc_template_part(
+			'template-parts/header/common-header',
+			array(
+				'title' => post_type_archive_title( '', false ),
+			)
+		);
+		?>
 		<?php if ( have_posts() ) : ?>
-
-			<?php
-			hcc_template_part(
-				'template-parts/header/common-header',
-				array(
-					'title' => post_type_archive_title( '', false ),
-				)
-			);
-			?>
 
 			<?php
 			/* Start the Loop */
@@ -33,12 +32,9 @@ get_header();
 
 			wp_numeric_posts_nav();
 
-			else :
-
-				get_template_part( 'template-parts/content', 'none' );
-
 		endif;
-			?>
+		?>
+		<?php get_template_part( 'template-parts/blocks/block-book', 'now' ); ?>
 	</main>
 	<?php get_template_part( 'template-parts/blocks/block-social', 'media' ); ?>
 

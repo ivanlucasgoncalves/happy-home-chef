@@ -86,6 +86,7 @@ class TeamBookingSettings
         $this->payment_gateways = array();
         $this->addPaymentGatewaySettingObject(new TeamBooking_PaymentGateways_Stripe_Settings);
         $this->addPaymentGatewaySettingObject(new TeamBooking_PaymentGateways_PayPal_Settings);
+        $this->addPaymentGatewaySettingObject(new TeamBooking_PaymentGateways_Ndis_Settings);
         $this->coworkers_url_array = array();
         $this->drop_tables_on_unistall = FALSE;
         $this->show_ical = TRUE;
@@ -1392,14 +1393,18 @@ class TeamBookingSettings
             $this->payment_gateways = array();
             $gateway_paypal = new TeamBooking_PaymentGateways_PayPal_Settings();
             $gateway_stripe = new TeamBooking_PaymentGateways_Stripe_Settings();
+            $gateway_ndis = new TeamBooking_PaymentGateways_Ndis_Settings();
             foreach ($array['payment_gateways'] as $gateway_id => $payment_gateway_array) {
                 if ($gateway_id === 'paypal') {
                     $gateway_paypal->inject_json(json_encode($payment_gateway_array));
                 } elseif ($gateway_id === 'stripe') {
                     $gateway_stripe->inject_json(json_encode($payment_gateway_array));
+                } elseif ($gateway_id === 'ndis') {
+                    $gateway_ndis->inject_json(json_encode($payment_gateway_array));
                 }
             }
             $this->addPaymentGatewaySettingObject($gateway_paypal);
+            $this->addPaymentGatewaySettingObject($gateway_ndis);
             $this->addPaymentGatewaySettingObject($gateway_stripe);
         }
 

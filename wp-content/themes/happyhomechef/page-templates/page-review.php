@@ -18,7 +18,7 @@ get_header( 'review' );
 				<p class="text--sixteen-px">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nobis animi eius eligendi exercitationem quidem asperiores iusto error sint assumenda, sapiente molestiae quibusdam consequatur. Ipsam consequatur exercitationem impedit voluptates omnis.</p>
 			</div>
 			<div class="col-12 col-lg-6 offset-lg-1 mt-5 mt-lg-0">
-				<?php echo do_shortcode( '[gravityform id="1" title="false" description="false" tabindex="49"]' ); ?> 
+				<?php echo do_shortcode( '[gravityform id="3" title="false" description="false" tabindex="49"]' ); ?> 
 			</div>
 		</div>
 	</div>

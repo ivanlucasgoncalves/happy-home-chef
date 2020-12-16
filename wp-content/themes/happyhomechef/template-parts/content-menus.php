@@ -34,7 +34,7 @@
 			<?php
 			if ( have_rows( 'options' ) ) :
 				?>
-				<h4 class="mb-2"><?php echo esc_html( 'Options:' ); ?></h4>
+				<h4 class="mb-3"><?php echo esc_html( 'Options:' ); ?></h4>
 				<ul class="menu-list">
 					<?php
 					while ( have_rows( 'options' ) ) :

@@ -16,5 +16,15 @@ import MenuAccordion from './menu-accordion';
     new HeaderAnimation;
     new Search;
     new MenuAccordion( $ );
+
+    const calendar = document.querySelector( '.calendar-container' );
+    if ( null !== calendar ) {
+        if ( null !== calendar.querySelector( '.clickable-div' ) ) {
+            calendar.querySelector( '.clickable-div' ).addEventListener( 'click', ( e ) => {
+                e.preventDefault();
+                window.location.href = 'http://staging.happyhomechef.com.au/book-now/';
+            } );
+        }
+    }
 }( jQuery ) );
 

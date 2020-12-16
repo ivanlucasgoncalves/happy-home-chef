@@ -23,14 +23,14 @@ get_header();
 		<?php
 		if ( have_posts() ) :
 			?>
-			<div class="block-component block-component--our-services background--light-grey">
+			<div class="block-component background--light-grey pb-0">
 				<div class="container">
 					<div class="row">
 						<?php
 						while ( have_posts() ) :
 								the_post();
 							?>
-							<div class="col-md col-lg-6">
+							<div class="col-12 col-md-6 mb-4 mb-md-5">
 								<div class="card border-radius h-100">
 									<div class="row no-gutters h-100">
 										<div class="col-lg-5 card__img" style="background-image: url(<?php echo esc_attr( get_the_post_thumbnail_url( get_the_ID(), 'thumbnail_post_cols' ) ); ?>)"></div>
@@ -51,6 +51,7 @@ get_header();
 				</div>
 			</div>
 		<?php endif; ?>
+		<?php get_template_part( 'template-parts/blocks/block-book', 'now' ); ?>
 		<?php get_template_part( 'template-parts/blocks/block', 'reviews' ); ?>
 		<?php get_template_part( 'template-parts/blocks/block', 'hcc-live-on-sunrise' ); ?>
 	</main>

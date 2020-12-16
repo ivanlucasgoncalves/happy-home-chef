@@ -1,0 +1,88 @@
+// Face
+.facebook-app {
+    .follow-link {
+        color: $black;
+        font-family: $inter-medium;
+
+        svg {
+            width: 14px;
+        }
+    }
+    .cff-wrapper {
+        margin-top: 5px;
+        
+        .cff-item{
+            display: flex;
+            flex-direction: column-reverse;
+            position: relative;
+        }
+
+        .cff-post-text {
+            background: $white;
+            border-radius: 15px;
+            padding: 15px !important;
+            max-height: 250px;
+            overflow: auto;
+            border: 1px solid #ccc;
+        }
+        .cff-author {
+            margin: 15px 0 !important;
+
+            .cff-author-text {
+                a {
+                    color: $black;
+                    font-family: $inter-medium;
+                }
+            }
+        }
+        .cff-story {
+            display: none !important;
+        }
+        .cff-post-links {
+            margin-top: 15px !important;
+            padding: 0 !important;
+            position: absolute;
+            bottom: 0;
+            a {
+                color: $black;
+                font-family: $inter-medium;
+            }
+        }
+        .cff-date {
+            margin: 15px 0 0 0!important;
+        }
+    }
+    
+}
+// Insta
+.insta-app {
+    .follow-link {
+        color: $black;
+        font-family: $inter-medium;
+        margin-left: 20px;
+
+        svg {
+            width: 26px;
+        }
+    }
+    #sb_instagram {
+        padding-bottom: 0 !important;
+
+        #sbi_images {
+            position: relative;
+            right: -10px;
+            .sbi_item {
+                padding: 10px !important;
+
+                @include media-breakpoint-down(md) {
+                    width: 50% !important;
+                    right: inherit;
+                }
+            }
+        }
+        .sbi_photo_wrap {
+            border-radius: 15px;
+            overflow: hidden;
+        }
+    }
+}

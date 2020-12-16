@@ -60,7 +60,7 @@ get_header();
 			<?php
 		endwhile; // End of the loop.
 		?>
-
+		<?php get_template_part( 'template-parts/blocks/block-book', 'now' ); ?>
 	</main>
 	<?php get_template_part( 'template-parts/blocks/block-social', 'media' ); ?>
 

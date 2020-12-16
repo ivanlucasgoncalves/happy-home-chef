@@ -53,10 +53,11 @@ $top_hero = get_field( 'top_hero_group' );
 			</div>
 			<div class="col-12 col-lg-6 mt-5 mt-lg-0 top-hero--right-content d-none d-lg-block">
 				<div class="d-flex justify-content-center align-items-end h-100">
-					<div class="background-image-top-hero d-none d-sm-block" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/src/images/sample3.png' ); ?>)"></div>
+					<div class="background-image-top-hero d-none d-sm-block" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/src/images/happy-home-chef-banner.jpg' ); ?>)"></div>
 					<div class="calendar-container">
-						<!-- <span class="book-now-heading">Book now</span> -->
-						<?php //echo do_shortcode( '[tb-calendar booking="happy-home-cooking" slot_style="1" nofilter="yes" notimezone="yes"]' ); ?>   
+						<a class="book-now-heading" href="<?php echo esc_url( home_url( '/book-now' ) ); ?>">Book now</a>
+						<?php echo do_shortcode( '[tb-calendar booking="hcc-booking" slot_style="1" nofilter="yes" notimezone="yes"]' ); ?>
+						<div class="clickable-div"></div>  
 					</div>
 				</div>
 			</div>

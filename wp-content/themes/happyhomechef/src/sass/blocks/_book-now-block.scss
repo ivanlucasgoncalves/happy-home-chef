@@ -6,9 +6,12 @@
             background-size: cover;
             border-radius: 15px;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             
             @include media-breakpoint-up(lg) {
-                min-height: 640px;
+                min-height: 500px;
             }
 
             &:after {

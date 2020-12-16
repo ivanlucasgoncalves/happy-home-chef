@@ -17,7 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<?php wp_head(); ?>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800;900&display=swap" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800;900&display=swap" rel="stylesheet"> -->
 </head>
 
 <body <?php body_class(); ?>>

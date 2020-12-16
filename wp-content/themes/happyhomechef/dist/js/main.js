@@ -934,6 +934,16 @@ __webpack_require__.r(__webpack_exports__);
   new _sticky_header__WEBPACK_IMPORTED_MODULE_5__["default"]();
   new _search__WEBPACK_IMPORTED_MODULE_6__["default"]();
   new _menu_accordion__WEBPACK_IMPORTED_MODULE_7__["default"]($);
+  var calendar = document.querySelector('.calendar-container');
+
+  if (null !== calendar) {
+    if (null !== calendar.querySelector('.clickable-div')) {
+      calendar.querySelector('.clickable-div').addEventListener('click', function (e) {
+        e.preventDefault();
+        window.location.href = 'http://staging.happyhomechef.com.au/book-now/';
+      });
+    }
+  }
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "jquery")))
 

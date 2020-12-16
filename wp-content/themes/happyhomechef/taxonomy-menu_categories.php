@@ -67,7 +67,7 @@ $custom_term_name = get_queried_object()->name;
 				</div>
 			</div>
 		</div>
-		<div class="background--white pt-5 pb-5">
+		<div class="background--white pt-5">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-auto">
@@ -86,7 +86,7 @@ $custom_term_name = get_queried_object()->name;
 							$thumbnail_url = wp_get_attachment_image_url( $thumbnail_id, 'thumbnail_post_cols' );
 							?>
 
-							<div class="col-md col-lg-6">
+							<div class="col-12 col-md-6 mb-4 mb-md-5">
 								<div class="card border-radius h-100">
 									<div class="row no-gutters h-100">
 										<div class="col-lg-5 card__img" style="background-image: url(<?php echo esc_attr( $thumbnail_url ); ?>)"></div>
@@ -109,6 +109,7 @@ $custom_term_name = get_queried_object()->name;
 				</div>
 			</div>
 		</div>
+		<?php get_template_part( 'template-parts/blocks/block-book', 'now' ); ?>
 	</main>
 	<?php get_template_part( 'template-parts/blocks/block-social', 'media' ); ?>
 

@@ -27,8 +27,9 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-		<?php get_template_part( 'template-parts/blocks/block-book', 'now' ); ?>
+		<?php get_template_part( 'template-parts/blocks/block', 'gallery' ); ?>
 		<?php get_template_part( 'template-parts/blocks/block', 'reviews' ); ?>
+		<?php get_template_part( 'template-parts/blocks/block-book', 'now' ); ?>
 	</main>
 	<?php get_template_part( 'template-parts/blocks/block-social', 'media' ); ?>
 
