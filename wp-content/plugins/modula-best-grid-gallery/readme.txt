@@ -2,9 +2,9 @@
 Contributors: wpchill, silkalns
 Tags: best gallery plugin, image gallery, video gallery, free gallery, wordpress gallery plugin, best gallery plugin, masonry gallery, media gallery, portfolio gallery, simple gallery, responsive gallery, photo gallery, grid gallery, product gallery, 
 Requires at least: 5.2
-Tested up to: 5.5
+Tested up to: 5.6
 Requires PHP: 5.6
-Stable tag: 2.4.0
+Stable tag: 2.4.1
 License: GNU General Public License v3.0 or later
 
 The WordPress gallery plugin that's highlighy customizable & you can use to impress your clients. Create beautiful image galleries in minutes.
@@ -130,4 +130,4 @@ By asking a question on the [support forums](https://wordpress.org/support/plugi
 
 == Changelog ==
 
-See <a href="https://github.com/MachoThemes/modula-lite/blob/master/changelog.txt" target="_blank">changelog</a>
+See <a href="https://github.com/wpchill/modula-lite/blob/dev/changelog.txt" target="_blank">changelog</a>

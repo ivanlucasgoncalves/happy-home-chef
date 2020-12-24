@@ -3081,9 +3081,82 @@ a.text-dark:hover, a.text-dark:focus {
           position: absolute;
           right: 0; }
     .calendar_main_container .tb-frontend-calendar .tbk-reservation-form-header {
-      margin-top: 30px; }
+      display: none !important; }
     .calendar_main_container .tb-frontend-calendar .tbk-tickets-price-section {
       display: none; }
+
+.tbk-reservation-form-container .ui.horizontal.tbk-divider {
+  margin-bottom: 40px; }
+
+.tbk-reservation-form-container .tbk-fields a {
+  color: #EC4579 !important; }
+
+.tbk-reservation-form-container .tbk-content input, .tbk-reservation-form-container .tbk-content .tbk-dropdown {
+  padding: 1em !important;
+  font-family: "Inter Regular", serif !important;
+  height: 46px !important; }
+  .tbk-reservation-form-container .tbk-content input:focus, .tbk-reservation-form-container .tbk-content .tbk-dropdown:focus {
+    border-color: 1px solid #EC4579 !important; }
+
+.tbk-reservation-form-container .tbk-content textarea {
+  resize: vertical;
+  padding: 1em !important;
+  font-family: "Inter Regular", serif !important;
+  min-height: 100px; }
+
+.tbk-reservation-form-container .tbk-content .tbk-field {
+  margin: 0 0 1.5em; }
+  .tbk-reservation-form-container .tbk-content .tbk-field > label {
+    font-family: "Inter Bold", serif;
+    min-height: 37px;
+    line-height: 18px;
+    font-weight: inherit !important; }
+    .tbk-reservation-form-container .tbk-content .tbk-field > label .small-label {
+      margin-top: 5px;
+      font-family: "Inter Regular", serif !important;
+      display: block;
+      font-size: 11px;
+      color: #000000; }
+  .tbk-reservation-form-container .tbk-content .tbk-field.tbk-field-checkbox {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse; }
+    .tbk-reservation-form-container .tbk-content .tbk-field.tbk-field-checkbox .tbk-checkbox {
+      width: 29px;
+      min-width: inherit !important; }
+  .tbk-reservation-form-container .tbk-content .tbk-field .tbk-field-description {
+    margin-top: 5px;
+    font-family: "Inter Regular", serif !important;
+    font-size: 11px;
+    color: #000000; }
+
+.tbk-reservation-form-container .tbk-reservation-form-footer {
+  border-top: 0;
+  margin-top: 0;
+  display: flex;
+  justify-content: flex-end; }
+  .tbk-reservation-form-container .tbk-reservation-form-footer .tbk-book-now {
+    display: flex;
+    justify-content: flex-end; }
+  .tbk-reservation-form-container .tbk-reservation-form-footer .tbk-book-now-button, .tbk-reservation-form-container .tbk-reservation-form-footer .tbk-book-confirmation-button {
+    font-family: "Inter Bold", serif;
+    background: #008792 !important;
+    font-size: 1.2em;
+    margin: 0; }
+
+.tbk-reservation-review-content {
+  margin-top: 30px !important;
+  border-top: 0 !important; }
+  .tbk-reservation-review-content table th {
+    padding: 8px 6px !important;
+    text-align: left; }
+  .tbk-reservation-review-content .tbk-reservation-review-footer {
+    border-top: 0; }
+    .tbk-reservation-review-content .tbk-reservation-review-footer .tbk-book-confirmation-button {
+      font-family: "Inter Bold", serif;
+      background: #008792 !important;
+      font-size: 1.2em;
+      margin: 0; }
 
 .sticky-header {
   background-color: #FFFFFF;
@@ -3642,16 +3715,20 @@ h6 {
 
 .insta-app .follow-link {
   color: #000000;
-  font-family: "Inter Medium", serif;
-  margin-left: 20px; }
+  font-family: "Inter Medium", serif; }
+  @media (min-width: 768px) {
+    .insta-app .follow-link {
+      margin-left: 20px; } }
   .insta-app .follow-link svg {
     width: 26px; }
 
 .insta-app #sb_instagram {
   padding-bottom: 0 !important; }
   .insta-app #sb_instagram #sbi_images {
-    position: relative;
-    right: -10px; }
+    position: relative; }
+    @media (min-width: 768px) {
+      .insta-app #sb_instagram #sbi_images {
+        right: -10px; } }
     .insta-app #sb_instagram #sbi_images .sbi_item {
       padding: 10px !important; }
       @media (max-width: 991.98px) {
@@ -3667,6 +3744,36 @@ h6 {
   overflow: hidden;
   position: relative;
   border: 1px solid #efefef; }
+
+.custom-card {
+  background-color: #afd5e2;
+  background-image: url(../images/hhc-banner.png);
+  background-position: center right;
+  background-repeat: no-repeat;
+  border-radius: 10px; }
+
+.package-block > div {
+  border: 1px solid #F5F5F5;
+  overflow: hidden;
+  border-radius: 10px; }
+
+.package-block__inner {
+  border-radius: 10px;
+  padding: 25px 15px 30px 15px;
+  background-color: #fdfdfd; }
+  .package-block__inner h3 {
+    font-size: 40px; }
+    .package-block__inner h3 .subheading {
+      font-size: 16px;
+      font-family: "Inter Regular", serif; }
+  .package-block__inner h5 {
+    font-size: 22px; }
+
+.package-block:nth-child(even) .package-block__inner {
+  border-bottom: 7px solid #008792; }
+
+.package-block:nth-child(odd) .package-block__inner {
+  border-bottom: 7px solid #EC4579; }
 
 .hamburger-click {
   width: 28px; }
@@ -3720,18 +3827,18 @@ h6 {
     @media (max-width: 767.98px) {
       .main-navigation .menu li {
         text-align: right;
-        margin-bottom: 35px; }
+        margin-bottom: 30px; }
         .main-navigation .menu li a {
-          font-size: 34px; }
+          font-size: 26px; }
           .main-navigation .menu li a::after {
             content: '';
             height: 2px;
-            width: 40px;
+            width: 30px;
             background-color: #008792;
             display: block;
             position: absolute;
             right: 0;
-            bottom: -19px; } }
+            bottom: -15px; } }
 
 .site-footer .widget_nav_menu .widget-title {
   font-size: 16px;
@@ -3890,6 +3997,10 @@ h6 {
 .entry-content ul li {
   margin-bottom: 7px;
   list-style: inside; }
+
+.entry-content a {
+  color: #000000;
+  font-family: "Inter Bold", serif; }
 
 .page-template-page-about-us .block-component--book-now {
   padding-top: 0 !important; }

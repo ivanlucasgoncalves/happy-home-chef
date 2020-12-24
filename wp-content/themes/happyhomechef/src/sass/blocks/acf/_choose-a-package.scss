@@ -1,0 +1,38 @@
+.package-block {
+
+    > div {
+        border: 1px solid $light-grey;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    &__inner {
+        border-radius: 10px;
+        padding: 25px 15px 30px 15px;
+        background-color: #fdfdfd;
+    
+        h3 {
+            font-size: 40px;
+            .subheading {
+                font-size: 16px;
+                font-family: $inter-regular;
+            }
+        }
+    
+        h5 {
+            font-size: 22px;
+        }
+    }
+
+    &:nth-child(even) {
+        .package-block__inner {
+            border-bottom: 7px solid $secondary-color;
+        }
+    }
+    &:nth-child(odd) {
+        .package-block__inner {
+            border-bottom: 7px solid $primary-color;
+        }
+    }
+    
+}

@@ -1,0 +1,22 @@
+.tbk-reservation-review-content {
+    margin-top: 30px !important;
+    border-top: 0 !important;
+
+    table th {
+        padding: 8px 6px !important;
+        text-align: left;
+    }
+
+    .tbk-reservation-review-footer {
+
+        border-top: 0;
+
+        .tbk-book-confirmation-button {
+            font-family: $inter-bold;
+            background: $secondary-color !important;
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+    }
+}

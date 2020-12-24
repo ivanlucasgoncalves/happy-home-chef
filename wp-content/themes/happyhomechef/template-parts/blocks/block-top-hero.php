@@ -56,7 +56,7 @@ $top_hero = get_field( 'top_hero_group' );
 					<div class="background-image-top-hero d-none d-sm-block" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/src/images/happy-home-chef-banner.jpg' ); ?>)"></div>
 					<div class="calendar-container">
 						<a class="book-now-heading" href="<?php echo esc_url( home_url( '/book-now' ) ); ?>">Book now</a>
-						<?php echo do_shortcode( '[tb-calendar booking="hcc-booking" slot_style="1" nofilter="yes" notimezone="yes"]' ); ?>
+						<?php echo do_shortcode( '[tb-calendar booking="happy-home-booking" slot_style="1" nofilter="yes" notimezone="yes"]' ); ?>
 						<div class="clickable-div"></div>  
 					</div>
 				</div>

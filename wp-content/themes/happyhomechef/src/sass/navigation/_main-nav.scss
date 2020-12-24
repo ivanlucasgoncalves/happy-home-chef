@@ -75,20 +75,20 @@
 
             @include media-breakpoint-down(sm) {
                 text-align: right;
-                margin-bottom: 35px;
+                margin-bottom: 30px;
 
                 a {
-                    font-size: 34px;
+                    font-size: 26px;
 
                     &::after {
                         content: '';
                         height: 2px;
-                        width: 40px;
+                        width: 30px;
                         background-color: $secondary-color;
                         display: block;
                         position: absolute;
                         right: 0;
-                        bottom: -19px;
+                        bottom: -15px;
                     }
                 }
             }

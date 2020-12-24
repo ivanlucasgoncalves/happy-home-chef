@@ -7,8 +7,16 @@
  * @package HCC Theme
  */
 
+$args  = [
+	'post_type'      => 'reviews',
+	'posts_per_page' => 3,
+];
+$query = new WP_Query( $args );
 ?>
 
+<?php
+if ( $query->have_posts() ) :
+	?>
 <div class="block-component block-component--reviews">
 	<div class="container">
 		<div class="row">
@@ -19,23 +27,15 @@
 				</svg><span class="ml-2">What our clients say</span></h2>
 			</div>
 		</div>
-		<?php
-		$args  = [
-			'post_type'      => 'reviews',
-			'posts_per_page' => 3,
-		];
-		$query = new WP_Query( $args );
-		?>
 		<div class="row mt-4 mt-md-5">
 			<div class="col-12 col-md-5 col-lg-4">
 				<?php
-				$count = 0;
-				if ( $query->have_posts() ) :
-					while ( $query->have_posts() ) :
-						$query->the_post();
-						?>
-						<button class="button-review border-radius d-flex align-items-center w-100 mb-3 <?php echo 0 === $count ? 'current-btn-review' : ''; ?>" data-id="<?php echo get_the_ID(); ?>">
-							<?php if ( has_post_thumbnail() ) : ?>
+				$count_btn = 0;
+				while ( $query->have_posts() ) :
+					$query->the_post();
+					?>
+						<button class="button-review border-radius d-flex align-items-center w-100 mb-3 <?php echo 0 === $count_btn ? 'current-btn-review' : ''; ?>" data-id="<?php echo get_the_ID(); ?>">
+						<?php if ( has_post_thumbnail() ) : ?>
 								<span class="button-img border-radius">
 									<?php echo get_the_post_thumbnail( get_the_ID(), 'thumbnail_review' ); ?>
 								</span>
@@ -51,36 +51,33 @@
 							</span>
 						</button>
 						<?php
-						$count++;
+						$count_btn++;
 					endwhile;
-				endif;
-				/* Restore original Post Data */
-				wp_reset_postdata();
 				?>
 				<a href="<?php echo esc_url( home_url( '/reviews' ) ); ?>" class="button button--all-reviews button--large border-radius text--underline color--black d-flex align-items-center justify-content-center w-100">View all reviews</a>
 			</div>
 			<div class="col-12 col-md-7 col-lg-8 mt-5 mt-md-0">
 				<?php
-				$count = 0;
-				if ( $query->have_posts() ) :
-					while ( $query->have_posts() ) :
-						$query->the_post();
-						?>
-						<div class="review-blk <?php echo 0 === $count ? 'current-review' : ''; ?>" data-id="<?php echo get_the_ID(); ?>">
+				$count_review = 0;
+				while ( $query->have_posts() ) :
+					$query->the_post();
+					?>
+						<div class="review-blk <?php echo 0 === $count_review ? 'current-review' : ''; ?>" data-id="<?php echo get_the_ID(); ?>">
 							<div class="review-stars mb-2 pl-0 pl-lg-5">
-								<?php hcc_reviews( get_the_ID() ); ?>
+							<?php hcc_reviews( get_the_ID() ); ?>
 							</div>
 							<h3 class="mb-3 pl-0 pl-lg-5"><?php echo esc_html( get_field( 'review_title', get_the_ID() ) ); ?></h3>
 							<p class="review-content pl-0 pl-lg-5"><?php echo hcc_custom_excerpt( get_the_content(), 65 ); //phpcs:ignore ?></p>
 						</div>
 						<?php
-						$count++;
+						$count_review++;
 					endwhile;
-				endif;
-				/* Restore original Post Data */
-				wp_reset_postdata();
 				?>
 			</div>
 		</div>
 	</div>
 </div>
+<?php endif;
+/* Restore original Post Data */
+wp_reset_postdata();
+?>

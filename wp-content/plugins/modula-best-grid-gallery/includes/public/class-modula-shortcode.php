@@ -293,7 +293,7 @@ class Modula_Shortcode {
 			$css .= "#{$gallery_id} { width:" . esc_attr( $settings['width'] ) . ";}";
 
 			// We don't have and need height setting on grid type
-			if('grid' != $settings['type']){
+			if('creative-gallery' == $settings['type']){
 				$css .= "#{$gallery_id} .modula-items{height:" . absint( $settings['height'] ) . "px;}";
 			}
 
@@ -358,6 +358,17 @@ class Modula_Shortcode {
 		if ( isset( $settings['show_navigation'] ) && '1' == $settings['show_navigation'] ) {
 			$fancybox_options['arrows'] = true;
 		}
+
+		$fancybox_options['baseTpl'] = '<div class="modula-fancybox-container modula-lightbox-' . $settings['gallery_id'] . '" role="dialog" tabindex="-1">'.
+		                               '<div class="modula-fancybox-bg"></div>'.
+		                               '<div class="modula-fancybox-inner">' .
+		                               '<div class="modula-fancybox-infobar"><span data-fancybox-index></span>&nbsp;/&nbsp;<span data-fancybox-count></span></div>'.
+		                               '<div class="modula-fancybox-toolbar">{{buttons}}</div>'.
+		                               '<div class="modula-fancybox-navigation">{{arrows}}</div>'.
+		                               '<div class="modula-fancybox-stage"></div>'.
+		                               '<div class="modula-fancybox-caption"><div class="modula-fancybox-caption__body"></div></div>'.
+		                               "</div>".
+		                               "</div>";
 
 
 		/**

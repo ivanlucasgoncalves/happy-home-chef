@@ -23,7 +23,7 @@ get_header();
 			<div class="row">
 				<div class="col-12 d-flex justify-content-center mb-5">
 					<div class="calendar-container-page">
-						<?php echo do_shortcode( '[tb-calendar booking="hcc-booking" slot_style="1" nofilter="yes" notimezone="yes"]' ); ?>   
+						<?php echo do_shortcode( '[tb-calendar booking="happy-home-booking" slot_style="1" nofilter="yes" notimezone="yes"]' ); ?>   
 					</div>
 				</div>
 			</div>

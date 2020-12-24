@@ -1,3 +1,11 @@
+= 2.4.1 - 14/12/2020 =
+Fixed gallery right margin when on full width container
+Fixed hover effect Pufrobo transition when using Divi builder
+Fixed Uninstall message appearing on Network Plugins when using Multisite
+Added Galleries and Suggest a feature tab on Extensions page and updated the extensions page UI. Also added the Suggest a feature tab to galleries list view
+Fixed Feedback form getting out of view
+Fixed overwriting lightbox CSS when using multiple galleries on page
+
 = 2.4.0 - 30/10/2020 =
 Fixed some typos
 Update migration function to use AJAX so that the PHP time limit won't be an issue

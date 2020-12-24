@@ -15,7 +15,7 @@
 			<div class="col-auto">
 				<div class="calendar-container">
 					<a class="book-now-heading" href="<?php echo esc_url( home_url( '/book-now' ) ); ?>">Book now</a>
-					<?php echo do_shortcode( '[tb-calendar booking="hcc-booking" slot_style="1" nofilter="yes" notimezone="yes"]' ); ?>
+					<?php echo do_shortcode( '[tb-calendar booking="happy-home-booking" slot_style="1" nofilter="yes" notimezone="yes"]' ); ?>
 					<div class="clickable-div"></div>  
 				</div>
 			</div>

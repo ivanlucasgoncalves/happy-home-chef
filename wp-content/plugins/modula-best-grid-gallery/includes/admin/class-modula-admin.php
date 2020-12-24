@@ -144,12 +144,23 @@ class Modula_Admin {
 		require_once MODULA_PATH . 'includes/admin/class-modula-addons.php';
 
 		$tabs = array(
-			'extensions' => array(
+			'galleries'       => array(
+				'name' => esc_html__( 'Galleries', 'modula-best-grid-gallery' ),
+				'url'  => admin_url( 'edit.php?post_type=modula-gallery' ),
+			),
+			'extensions'      => array(
 				'name' => esc_html__( 'Extensions', 'modula-best-grid-gallery' ),
 				'url'  => admin_url( 'edit.php?post_type=modula-gallery&page=modula-addons' ),
 			),
+			'suggest_feature' => array(
+				'name'   => esc_html__( 'Suggest a feature', 'modula-best-grid-gallery' ),
+				'icon'   => 'dashicons-external',
+				'url'    => 'https://docs.google.com/forms/d/e/1FAIpQLSc5eAZbxGROm_WSntX_3JVji2cMfS3LIbCNDKG1yF_VNe3R4g/viewform',
+				'target' => '_blank'
+			),
 		);
-		$tabs       = apply_filters( 'modula_exntesions_tabs', $tabs );
+
+		$tabs       = apply_filters( 'modula_extesions_tabs', $tabs );
 		$active_tab = 'extensions';
 		if ( isset( $_GET['tab'] ) && isset( $tabs[ $_GET['tab'] ] ) ) {
 			$active_tab = $_GET['tab'];
@@ -160,20 +171,21 @@ class Modula_Admin {
 			<?php
 			foreach( $tabs as $tab_id => $tab ) {
 				$active = ( $active_tab == $tab_id ? ' nav-tab-active' : '' );
-				echo '<a href="' . esc_url( $tab['url'] ) . '" class="nav-tab' . $active . '">';
+				echo '<a href="' . esc_url( $tab['url'] ) . '" class="nav-tab' . $active . '" '.(isset($tab['target'] )? 'target="'.$tab['target'].'"' : '').'>';
+				if ( isset( $tab['icon'] ) ) {
+					echo '<span class="dashicons ' . esc_attr( $tab['icon'] ) . '"></span>';
+				}
 				echo esc_html( $tab['name'] );
 				echo '</a>';
 			}
 			?>
-
+			<a id="modula-reload-extensions" class="button button-secondary" data-nonce="<?php echo esc_attr( wp_create_nonce( 'modula-reload-extensions' ) ); ?>"><span class="dashicons dashicons-update"></span><?php esc_html_e( 'Reload Extensions', 'modula-best-grid-gallery' ); ?></a>
 		</h2>
 		<?php
 
 		if ( 'extensions' == $active_tab ) {
 			$addons = new Modula_Addons();
 			?>
-			<h1 style="margin-bottom: 20px; display: inline-block;"><?php esc_html_e( 'Extensions', 'modula-best-grid-gallery' ); ?></h1>
-			<a id="modula-reload-extensions" class="button button-primary" style="margin: 10px 0 0 30px;" data-nonce="<?php echo esc_attr( wp_create_nonce( 'modula-reload-extensions' ) ); ?>"><?php esc_html_e( 'Reload Extensions', 'modula-best-grid-gallery' ); ?></a>
 			<div class="modula-addons-container">
 				<?php $addons->render_addons(); ?>
 			</div>

@@ -38,9 +38,11 @@
 @import './mixins';
 
 // =============================================================================
-// Calendar
+// Booking
 // =============================================================================
-@import './calendar/calendar';
+@import './booking/calendar';
+@import './booking/form';
+@import './booking/review-reservation';
 
 // =============================================================================
 // Header
@@ -82,6 +84,12 @@
 @import './blocks/book-now-block';
 @import './blocks/social-apps-block';
 @import './blocks/other-menus';
+
+// =============================================================================
+// Block styles - ACF
+// =============================================================================
+@import './blocks/acf/custom-cards';
+@import './blocks/acf/choose-a-package';
 
 // =============================================================================
 // Navigation

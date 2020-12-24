@@ -59,7 +59,10 @@
     .follow-link {
         color: $black;
         font-family: $inter-medium;
-        margin-left: 20px;
+
+        @include media-breakpoint-up(md) {
+            margin-left: 20px;
+        }
 
         svg {
             width: 26px;
@@ -70,7 +73,11 @@
 
         #sbi_images {
             position: relative;
-            right: -10px;
+
+            @include media-breakpoint-up(md) {
+                right: -10px;
+            }
+
             .sbi_item {
                 padding: 10px !important;
 

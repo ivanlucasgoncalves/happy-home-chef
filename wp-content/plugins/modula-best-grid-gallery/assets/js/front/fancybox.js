@@ -525,20 +525,20 @@
   // =============================================
 
   var inViewport = function (elem) {
-    var elemCenter, rez;
-
-    if (!elem || elem.ownerDocument !== document) {
+    // we create the element variable which contains the link that triggers the lightbox opening
+    var elemCenter, rez, element = elem.find('a.tile-inner')[0];
+    if (!element || element.ownerDocument !== document) {
       return false;
     }
 
     $(".modula-fancybox-container").css("pointer-events", "none");
 
     elemCenter = {
-      x: elem.getBoundingClientRect().left + elem.offsetWidth / 2,
-      y: elem.getBoundingClientRect().top + elem.offsetHeight / 2
+      x: element.getBoundingClientRect().left + element.offsetWidth / 2,
+      y: element.getBoundingClientRect().top + element.offsetHeight / 2
     };
 
-    rez = document.elementFromPoint(elemCenter.x, elemCenter.y) === elem;
+    rez = document.elementFromPoint(elemCenter.x, elemCenter.y) === element;
 
     $(".modula-fancybox-container").css("pointer-events", "");
 
@@ -1214,7 +1214,7 @@
 
         $.each(self.slides, function (index, slide) {
           slide.$slide.removeClass("modula-fancybox-animated").removeClass(function (index, className) {
-            return (className.match(/(^|\s)fancybox-fx-\S+/g) || []).join(" ");
+            return (className.match(/(^|\s)modula-fancybox-fx-\S+/g) || []).join(" ");
           });
 
           // Make sure that each slide is in equal distance
@@ -2541,7 +2541,7 @@
       $.modulaFancybox.stop($slide);
 
       //effectClassName = "fancybox-animated fancybox-slide--" + (slide.pos >= self.prevPos ? "next" : "previous") + " fancybox-fx-" + effect;
-      effectClassName = "modula-fancybox-slide--" + (slide.pos >= self.prevPos ? "next" : "previous") + " modula-fancybox-animated fancybox-fx-" + effect;
+      effectClassName = "modula-fancybox-slide--" + (slide.pos >= self.prevPos ? "next" : "previous") + " modula-fancybox-animated modula-fancybox-fx-" + effect;
 
       $slide.addClass(effectClassName).removeClass("modula-fancybox-slide--current"); //.addClass(effectClassName);
 
@@ -2584,7 +2584,7 @@
         bbw,
         blw;
 
-      if (!$thumb || !inViewport($thumb[0])) {
+      if (!$thumb || !inViewport($thumb)) {
         return false;
       }
 
@@ -4191,7 +4191,7 @@
             })
             .removeClass("modula-fancybox-animated")
             .removeClass(function (index, className) {
-              return (className.match(/(^|\s)fancybox-fx-\S+/g) || []).join(" ");
+              return (className.match(/(^|\s)modula-fancybox-fx-\S+/g) || []).join(" ");
             });
 
           if (slide.pos === instance.current.pos) {
