@@ -2991,6 +2991,9 @@ a.text-dark:hover, a.text-dark:focus {
     .calendar-container-page .calendar_main_container .tb-frontend-calendar .tbk-row:first-child > .tbk-column {
       font-size: 18px; }
 
+.calendar-container-page .tb-frontend-calendar.tbk-dropdown:focus {
+  border-color: #008792 !important; }
+
 .calendar_main_container {
   margin-bottom: 0 !important;
   border-radius: 10px;
@@ -3094,7 +3097,7 @@ a.text-dark:hover, a.text-dark:focus {
 .tbk-reservation-form-container .tbk-content input, .tbk-reservation-form-container .tbk-content .tbk-dropdown {
   padding: 1em !important;
   font-family: "Inter Regular", serif !important;
-  height: 46px !important; }
+  min-height: 46px !important; }
   .tbk-reservation-form-container .tbk-content input:focus, .tbk-reservation-form-container .tbk-content .tbk-dropdown:focus {
     border-color: 1px solid #EC4579 !important; }
 

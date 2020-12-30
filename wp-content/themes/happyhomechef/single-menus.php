@@ -61,6 +61,7 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 		<?php get_template_part( 'template-parts/blocks/block-book', 'now' ); ?>
+		<?php get_template_part( 'template-parts/blocks/block', 'hcc-live-on-sunrise' ); ?>
 	</main>
 	<?php get_template_part( 'template-parts/blocks/block-social', 'media' ); ?>
 

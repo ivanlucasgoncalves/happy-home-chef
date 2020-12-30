@@ -110,6 +110,7 @@ $custom_term_name = get_queried_object()->name;
 			</div>
 		</div>
 		<?php get_template_part( 'template-parts/blocks/block-book', 'now' ); ?>
+		<?php get_template_part( 'template-parts/blocks/block', 'hcc-live-on-sunrise' ); ?>
 	</main>
 	<?php get_template_part( 'template-parts/blocks/block-social', 'media' ); ?>
 
